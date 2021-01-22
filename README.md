@@ -15,5 +15,13 @@
 - clone the repo
 - cd into project
 - run `npm install`
-- run `npm start`, this should fire up the server, running at http://localhost:1234
+- when running the project for the first time, run `npm run build` to have it build the first time
+- this should fire up the server at http://localhost:1234
+- after that you can run the project in running `npm start`
 - stop the server with `control c`
+
+### TODO
+
+- clean-up SCSS (modular)
+- check mobile nav
+- host on netlify
