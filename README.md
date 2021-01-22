@@ -12,7 +12,7 @@
 
 ### How to run this?
 
-- clone this repo
+- clone the repo
 - cd into project
 - run `npm install`
 - run `npm start`, this should fire up the server, running at http://localhost:1234
