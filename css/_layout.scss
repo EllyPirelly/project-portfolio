@@ -127,7 +127,7 @@ button:focus {
     position: relative;
 }
 
-.main-headline:before {
+.main-headline:not(.footer):before {
     content: "";
     position: absolute;
     height: 8px;
@@ -376,6 +376,7 @@ a.scroll-to-top {
 .main-headline.footer {
     margin-bottom: auto;
     font-size: 1.5em;
+    pointer-events: none;
 }
 
 .footer-svgs {

@@ -15,15 +15,5 @@
 - clone this repo
 - cd into project
 - run `npm install`
-- run `parcel index.html`, this should fire up the server, running at http://localhost:1234
-- if you want to run more than one page at once, run
-
-```
-parcel index.html about.html
-// or
-parcel index.html ./**/*.html
-// or
-parcel ./**/*.html
-```
-
+- run `npm start`, this should fire up the server, running at http://localhost:1234
 - stop the server with `control c`

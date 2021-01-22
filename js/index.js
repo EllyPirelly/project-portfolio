@@ -40,5 +40,7 @@ const AnchorJump = (function () {
   }
 })()
 
-toggleNavBar()
-document.addEventListener('DOMContentLoaded', AnchorJump.init)
+document.addEventListener('DOMContentLoaded', () => {
+  AnchorJump.init()
+  toggleNavBar()
+})
