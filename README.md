@@ -23,5 +23,5 @@
 ### TODO
 
 - clean-up SCSS (modular)
-- check mobile nav
+- check mobile nav (display image also on mobile)
 - host on netlify
