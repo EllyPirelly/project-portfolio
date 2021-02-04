@@ -22,7 +22,7 @@ body {
     background-color: $bodybackground;
     color: $verydarkgray;
     font-family: "Bitter", serif;
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 300;
     line-height: 1.6;
     position: relative;
@@ -34,9 +34,9 @@ a {
 
 a.link-style {
     text-decoration: underline $darkgray;
-}
 
-a.link-style:hover {
-    background-color: $lightgray;
-    text-decoration: none;
+    &:hover {
+        background-color: $lightgray;
+        text-decoration: none;
+    }
 }
