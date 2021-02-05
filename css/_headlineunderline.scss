@@ -1,0 +1,84 @@
+/* main headline underline styles */
+.main-headline {
+    position: relative;
+
+    &:not(.footer):before {
+        content: "";
+        position: absolute;
+        height: 8px;
+        width: 100%;
+        top: 100%;
+    }
+}
+
+.main-headline.home:before {
+    background: repeating-linear-gradient(
+            -45deg,
+            $delicateblue 3px,
+            $verydarkgray 3px,
+            $verydarkgray 6px,
+            $delicateblue 6px,
+            $delicateblue 9px
+        ),
+        $verydarkgray;
+}
+
+.main-headline.about:before {
+    background: repeating-linear-gradient(
+            -45deg,
+            $pineappeslice 3px,
+            $verydarkgray 3px,
+            $verydarkgray 6px,
+            $pineappeslice 6px,
+            $pineappeslice 9px
+        ),
+        $verydarkgray;
+}
+
+.main-headline.code:before {
+    background: repeating-linear-gradient(
+            -45deg,
+            $lightmediumgray 3px,
+            $verydarkgray 3px,
+            $verydarkgray 6px,
+            $lightmediumgray 6px,
+            $lightmediumgray 9px
+        ),
+        $verydarkgray;
+}
+
+.main-headline.blog:before {
+    background: repeating-linear-gradient(
+            -45deg,
+            $balletslipper 3px,
+            $verydarkgray 3px,
+            $verydarkgray 6px,
+            $balletslipper 6px,
+            $balletslipper 9px
+        ),
+        $verydarkgray;
+}
+
+.main-headline.publication:before {
+    background: repeating-linear-gradient(
+            -45deg,
+            $blissfulblue 3px,
+            $verydarkgray 3px,
+            $verydarkgray 6px,
+            $blissfulblue 6px,
+            $blissfulblue 9px
+        ),
+        $verydarkgray;
+}
+
+.main-headline.under-construction:before {
+    background: repeating-linear-gradient(
+            -45deg,
+            $pineappeslice 3px,
+            $verydarkgray 3px,
+            $verydarkgray 6px,
+            $pineappeslice 6px,
+            $pineappeslice 9px
+        ),
+        $verydarkgray;
+}

@@ -1,9 +1,13 @@
 const toggleNavBar = () => {
-  const toggle = document.querySelector('[data-element="nav-toggle"]')
-  const targetSelector = toggle.getAttribute('data-target')
-  const target = document.querySelector(targetSelector)
+  const toggles = Array.from(document.querySelectorAll('[data-toggle="nav-toggle"]'))
 
-  toggle.addEventListener('click', () => target.classList.toggle('open'))
+  toggles.forEach(toggle => {
+      const targetSelector = toggle.getAttribute('data-target')
+      const target = document.querySelector(targetSelector)
+
+      toggle.addEventListener('click', () => target.classList.toggle('open'))
+  })
+
 }
 
 const AnchorJump = (function () {
