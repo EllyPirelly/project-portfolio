@@ -14,11 +14,11 @@
 
 <body id="top">
     <div class="outer-wrapper">
-        <div class="brand-img-container">
-            <img class="brand-img" alt="frontalview of Elle smiling" src="./img/eha-square-sw.jpg">
-        </div>
         <header class="header-wrapper">
-            <button class="nav-toggle" data-element="nav-toggle" data-target="[data-element=navbar]">
+            <a href="/" class="brand-img-container">
+                <img class="brand-img" alt="frontalview of Elle smiling" src="./img/eha-square-sw.jpg">
+            </a>
+            <button class="nav-toggle" data-toggle="nav-toggle" data-target="[data-element=navbar]">
                 <svg class="burger-menu-logo" aria-labelledby="burgerMenuLogo, burgerMenuDesc" fill="currentColor"
                     focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <title id="burgerMenuLogo">A burger menu logo</title>
@@ -29,11 +29,11 @@
                 </svg>
             </button>
             <nav class="navbar" data-element="navbar">
-                <a href="#about-me" data-link class="nav-item">About Me</a>
-                <a href="#code" data-link class="nav-item">Code</a>
-                <a href="#blog" data-link class="nav-item">Blog</a>
-                <a href="#publications" data-link class="nav-item">Publications</a>
-                <a href="#connect" data-link class="nav-item">Connect</a>
+                <a href="#about-me" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">About Me</a>
+                <a href="#code" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Code</a>
+                <a href="#blog" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Blog</a>
+                <a href="#publications" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Publications</a>
+                <a href="#connect" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Connect</a>
             </nav>
         </header>
         <main class="main-wrapper">
@@ -61,7 +61,7 @@
                     <p class="main-text about">With my background of 26 years in print media as digital media designer,
                         image editor and proof reader, I'm working on and improving in merging the digital and physical
                         world - to turn things into semantic HTML and subjectively pretty CSS.</p>
-                    <p class="main-text about">Currently I'm working myself through <a href="#"
+                    <p class="main-text about">Currently I'm working myself through <a href="https://frontendmasters.com/courses/"
                             class="link-style">Frontendmasters Tutorials.</a> I don't get paid to say this but I can
                         really recommend checking them out.
                     </p>
@@ -184,7 +184,7 @@
                     <img src="./img/blog/740_480_blog-main.jpg"
                         alt="Elle and her husband on a rainy day, standing on the Straße des 17. Juni"
                         class="blog-img">
-                    <p class="main-text blog">In the future you will find my blog posts here, as I want to occasionally put all of my handwritten findings about "the galaxy life the universe and everything" somewhere. </p>
+                    <p class="wobble-text blog">In the future you will find my blog posts here, as I want to occasionally put all of my handwritten findings about "the galaxy life the universe and everything" somewhere. </p>
                     <a href="./blog.html" class="wobble-link blog" aria-label="click to get to blog post"
                         rel="noopener noreferrer">
                         <p class="wobble-text blog">Click here for blog posts</p>
@@ -212,7 +212,7 @@
                     <hr class="hr-line">
                     <a href="https://medium.com/@elly.pirelly" class="wobble-link" aria-label="click to get to publication" target="_blank"
                         rel="noopener noreferrer">
-                        <p class="wobble-text publication">Medium: just another article</p>
+                        <p class="main-text publication">Medium: just another article</p>
                         <svg class="arrow-right-svg" fill="currentColor" focusable="false"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path

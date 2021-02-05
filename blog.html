@@ -11,14 +11,13 @@
     <link rel="stylesheet" href="./css/style.scss">
     <title>Blog</title>
 </head>
-
 <body id="top">
     <div class="outer-wrapper">
-        <div class="brand-img-container">
-            <img class="brand-img" alt="frontalview of Elle smiling" src="./img/eha-square-sw.jpg">
-        </div>
         <header class="header-wrapper">
-            <button class="nav-toggle" data-element="nav-toggle" data-target="[data-element=navbar]">
+            <a href="/" class="brand-img-container">
+                <img class="brand-img" alt="frontalview of Elle smiling" src="./img/eha-square-sw.jpg">
+            </a>
+            <button class="nav-toggle" data-toggle="nav-toggle" data-target="[data-element=navbar]">
                 <svg class="burger-menu-logo" aria-labelledby="burgerMenuLogo, burgerMenuDesc" fill="currentColor"
                     focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <title id="burgerMenuLogo">A burger menu logo</title>
@@ -29,11 +28,11 @@
                 </svg>
             </button>
             <nav class="navbar" data-element="navbar">
-                <a href="./index#about-me" class="nav-item">About Me</a>
-                <a href="./index#code" class="nav-item">Code</a>
-                <a href="./index#blog" class="nav-item">Blog</a>
-                <a href="./index#publications" class="nav-item">Publications</a>
-                <a href="./index#connect" class="nav-item">Connect</a>
+                <a href="./index#about-me" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">About Me</a>
+                <a href="./index#code" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Code</a>
+                <a href="./index#blog" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Blog</a>
+                <a href="./index#publications" data-toggle="nav-toggle" data-target="[data-element=navbar]"  class="nav-item">Publications</a>
+                <a href="./index#connect" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Connect</a>
             </nav>
         </header>
         <main class="blg-wrapper">

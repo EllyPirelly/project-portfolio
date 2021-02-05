@@ -1,46 +1,50 @@
 const toggleNavBar = () => {
-  const toggle = document.querySelector('[data-element="nav-toggle"]')
-  const targetSelector = toggle.getAttribute('data-target')
-  const target = document.querySelector(targetSelector)
+    const toggles = Array.from(document.querySelectorAll('[data-toggle="nav-toggle"]'))
 
-  toggle.addEventListener('click', () => target.classList.toggle('open'))
-}
+    toggles.forEach(toggle => {
+        const targetSelector = toggle.getAttribute('data-target')
+        const target = document.querySelector(targetSelector)
 
-const AnchorJump = (function () {
-  let links
-
-  const setLinks = () => {
-    links = Array.from(document.querySelectorAll('[data-link]'))
-  }
-
-  const linkAction = function (event) {
-    event.preventDefault()
-
-    const href = this.getAttribute('href')
-    const target = document.querySelector(href)
-
-    history.pushState(null, null, href)
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
+        toggle.addEventListener('click', () => target.classList.toggle('open'))
     })
+
   }
 
-  const setLinkAction = () => {
-    links.forEach((link) => link.addEventListener('click', linkAction))
-  }
+  const AnchorJump = (function () {
+    let links
 
-  const init = () => {
-    setLinks()
-    setLinkAction()
-  }
+    const setLinks = () => {
+      links = Array.from(document.querySelectorAll('[data-link]'))
+    }
 
-  return {
-    init,
-  }
-})()
+    const linkAction = function (event) {
+      event.preventDefault()
 
-document.addEventListener('DOMContentLoaded', () => {
-  AnchorJump.init()
-  toggleNavBar()
-})
+      const href = this.getAttribute('href')
+      const target = document.querySelector(href)
+
+      history.pushState(null, null, href)
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+
+    const setLinkAction = () => {
+      links.forEach((link) => link.addEventListener('click', linkAction))
+    }
+
+    const init = () => {
+      setLinks()
+      setLinkAction()
+    }
+
+    return {
+      init,
+    }
+  })()
+
+  document.addEventListener('DOMContentLoaded', () => {
+    AnchorJump.init()
+    toggleNavBar()
+  })
