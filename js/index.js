@@ -48,3 +48,27 @@ const toggleNavBar = () => {
     AnchorJump.init()
     toggleNavBar()
   })
+
+  /* code content button start */
+  let button = document.querySelector('[data-toggle="content-toggle"]');
+  let content = document.querySelector("#code-content");
+  let showContent = false;
+  let buttonState = {
+    "Click to show more examples" : "Click to hide",
+    "Click to hide" : "Click to show more examples"
+  };
+
+  button.addEventListener("click", () => {
+    showContent = !showContent;
+
+    if (showContent === true) {
+      content.style.display = "grid"
+    } else {
+      content.style.display = "none"
+    };
+
+    button.innerText = buttonState[button.innerText];
+
+  });
+/* code content button end */
+
