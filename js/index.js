@@ -49,11 +49,11 @@ const toggleNavBar = () => {
     toggleNavBar()
   })
 
-  /* code content button start */
-  let button = document.querySelector('[data-toggle="content-toggle"]');
-  let content = document.querySelector("#code-content");
+  /* code content button */
+  const button = document.querySelector('[data-toggle="content-toggle"]');
+  const content = document.querySelector("#code-content");
   let showContent = false;
-  let buttonState = {
+  const buttonState = {
     "Click to show more examples" : "Click to hide",
     "Click to hide" : "Click to show more examples"
   };
@@ -70,5 +70,3 @@ const toggleNavBar = () => {
     button.innerText = buttonState[button.innerText];
 
   });
-/* code content button end */
-

@@ -95,3 +95,15 @@
         ),
         $verydarkgray;
 }
+
+.blg-main-headline.extended:before {
+    background: repeating-linear-gradient(
+        -45deg,
+        $paleorange 3px,
+        $verydarkgray 3px,
+        $verydarkgray 6px,
+        $paleorange 6px,
+        $paleorange 9px
+    ),
+    $verydarkgray;
+}
