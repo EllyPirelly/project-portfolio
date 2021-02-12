@@ -107,9 +107,12 @@
                         </div>
                     </section>
                     <!-- additional code on click -->
-                    <section class="code-additional">
-                    <button class="content-toggle" data-toggle="content-toggle">Click to show more examples</button>
-                        <div id="code-content" class="code-toggled">
+                    <section class="code-additional" data-element="content-additional">
+                        <button class="content-toggle" data-toggle="content-toggle" data-target="[data-element=content-additional]">
+                            <span class="more">More</span>
+                            <span class="less">Less</span>
+                        </button>
+                        <div class="code-toggled">
                             <div class="overlay-container">
                                 <a href="https://github.com/EllyPirelly/project-privacy-dialog" target="_blank" rel="noopener noreferrer">
                                     <img class="overlay-img" src="/ex-cookie-consent.48e9f041.png" alt="desktop screenshot of example task 'privacy dialoge'">

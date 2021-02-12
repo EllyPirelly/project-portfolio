@@ -17,12 +17,12 @@
 
 /* blog sidebar */
 .blg-sidenav-wrapper {
-    width: 100%;
-    color: $verydarkgray;
     background-color: $paleorange;
     box-shadow: 0 0 10px 0 $mediumgray;
-    padding: 2em;
+    color: $verydarkgray;
     overflow-y: auto;
+    padding: 2em;
+    width: 100%;
 
       @media screen and (min-width: $breakpoint-medium) {
         --offset: 9em;
@@ -80,9 +80,6 @@
         background-color: transparent;
         padding: 0;
 
-        @media screen and (min-width: $breakpoint-medium) {
-            padding: 0 1.5em 0 0;
-        }
     }
 }
 
