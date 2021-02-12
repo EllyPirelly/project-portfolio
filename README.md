@@ -20,8 +20,9 @@
 - after that you can run the project in running `npm start`
 - stop the server with `control c`
 
-### TODO
+### TODO / ongoing
 
+- build blog page
+- introduce click for more examples button (still todo: better styling)
 - clean-up SCSS (modular)
-- check mobile nav (display image also on mobile)
 - host on netlify

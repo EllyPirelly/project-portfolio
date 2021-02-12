@@ -1,5 +1,6 @@
 /* main headline underline styles */
-.main-headline {
+.main-headline,
+.blg-main-headline {
     position: relative;
 
     &:not(.footer):before {
@@ -81,4 +82,28 @@
             $pineappeslice 9px
         ),
         $verydarkgray;
+}
+
+.blg-main-headline:before {
+    background: repeating-linear-gradient(
+            -45deg,
+            $pineappeslice 3px,
+            $verydarkgray 3px,
+            $verydarkgray 6px,
+            $pineappeslice 6px,
+            $pineappeslice 9px
+        ),
+        $verydarkgray;
+}
+
+.blg-main-headline.extended:before {
+    background: repeating-linear-gradient(
+        -45deg,
+        $paleorange 3px,
+        $verydarkgray 3px,
+        $verydarkgray 6px,
+        $paleorange 6px,
+        $paleorange 9px
+    ),
+    $verydarkgray;
 }

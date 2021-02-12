@@ -4,6 +4,7 @@
 @import "wobble";
 
 @import "layout";
+@import "blog";
 
 /* RESETS and general styles */
 html {
@@ -19,7 +20,7 @@ html {
 }
 
 body {
-    background-color: $bodybackground;
+    background-color: $paleorange;
     color: $verydarkgray;
     font-family: "Bitter", serif;
     font-size: 16px;
