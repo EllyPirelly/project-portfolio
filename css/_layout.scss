@@ -4,16 +4,17 @@
 }
 
 .brand-img {
-    border: 4px solid $verydarkgray;
+    background-color: $delicateblue;
+    border: 2px solid $paleorange;
     border-radius: 50%;
-    box-shadow: 0 0 0 6px $pastelgreen;
+    box-shadow: 0 0 0 6px $delicateblue;
     height: 100px;
     object-fit: cover;
 }
 
 /* header */
 .header-wrapper {
-    background-color: $pastelgreen;
+    background-color: $delicateblue;
     height: 68px;
     position: sticky;
     padding: 1em 1.5em;
@@ -34,9 +35,8 @@
 
 /* navigation */
 button {
-    background-color: $pastelgreen;
+    background-color: $delicateblue;
     border: 1px solid transparent;
-    color: $paleorange;
     padding: 0;
 
     &:active,
@@ -50,7 +50,7 @@ button {
 }
 
 .navbar {
-    @media screen and (min-width: $breakpoint-small) {
+    @media screen and (min-width: $breakpoint-small-medium) {
         display: flex;
         justify-content: flex-end;
         width: 100vw;
@@ -58,45 +58,56 @@ button {
 }
 
 .nav-item {
-    color: $paleorange;
     display: none;
     font-size: 1.25em;
     font-weight: 500;
-    margin: 0.7em 0 0.7em 0;
+    padding: 10px 14px;
     text-align: right;
     text-decoration: none;
 
-    @media screen and (min-width: $breakpoint-small) {
+    @media screen and (min-width: $breakpoint-small-medium) {
         align-items: center;
         display: inline-flex;
-        margin: 0 0 0 1em;
+    }
+    &:last-of-type {
+        margin-top: 70px;
+        @media screen and (min-width: $breakpoint-small-medium) {
+            margin-left: 70px;
+            margin-top: 0;
+        }
     }
 
     &:hover {
-        color: $verydarkgray;
-        text-decoration: underline;
+        background-color: $blissfulblue;
+        border-radius: 4px;
+        color: $paleorange;
+        padding: 10px 14px;
     }
 }
 
-.navbar.open {
-    background-color: $pastelgreen;
+.navbar.toggle {
+    background-color: $delicateblue;
     padding: 1.5em;
     position: absolute;
     top: 60px;
     right: 0;
     width: 65vw;
 
-    @media screen and (min-width: $breakpoint-small) {
-        background-color: $pastelgreen;
+    & .nav-item {
+        display: block;
+    }
+
+    @media screen and (min-width: $breakpoint-small-medium) {
+        background-color: $delicateblue;
         padding: 0;
         position: initial;
         top: 0;
         width: 100vw;
+        & .nav-item {
+            display: inline-flex;
+        }
     }
 
-    & .nav-item {
-        display: block;
-    }
 }
 
 .nav-toggle {
@@ -106,7 +117,7 @@ button {
     top: 20px;
     width: 32px;
 
-    @media screen and (min-width: $breakpoint-small) {
+    @media screen and (min-width: $breakpoint-small-medium) {
         display: none;
     }
 }
@@ -178,7 +189,7 @@ button {
 }
 
 .home-container {
-    background-color: $delicateblue;
+    background-color: $pastelgreen;
 }
 
 .home-img {
@@ -353,11 +364,11 @@ button {
     }
 }
 
-.code-additional {
+.extra-content-wrapper {
     text-align: center;
 }
 
-.content-toggle {
+.extra-content-button {
     color: $verydarkgray;
     background-color: $paleorange;
     border: 1px solid $verydarkgray;
@@ -382,15 +393,20 @@ button {
     }
 }
 
-.less {
+.button-text-more {
+    .toggle & {
+        display: none;
+    }
+}
+
+.button-text-less {
     display: none;
-}
-.less.open {
-    display: block;
+    .toggle & {
+        display: inline-block;
+    }
 }
 
-
-.code-toggled {
+.extra-examples-wrapper {
     display: none;
     margin-top: 2em;
 
@@ -406,7 +422,7 @@ button {
         grid-template-rows: auto;
     }
 
-    .code-additional.open & {
+    .extra-content-wrapper.toggle & {
         display: grid;
     }
 }
@@ -455,7 +471,7 @@ div.overlay-container {
 }
 
 .overlay-text {
-    font-size: 1.25em;
+    font-size: 1em;
     left: 50%;
     overflow: hidden;
     padding: 0 0.6em;
@@ -464,6 +480,10 @@ div.overlay-container {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+
+    @media screen and (min-width: $breakpoint-xsmall) {
+        font-size: 1.25em;
+    }
 }
 
 /* blog and pub */
@@ -512,7 +532,7 @@ div.overlay-container {
 }
 
 /* blog */
-#blog {
+#writing {
     @media screen and (min-width: $breakpoint-medium) {
         grid-column: 2 / 3;
         grid-row: 4 / 5;
@@ -546,13 +566,6 @@ div.overlay-container {
 }
 
 /* publication */
-#publications {
-    @media screen and (min-width: $breakpoint-medium) {
-        grid-column: 2 / 3;
-        grid-row: 5 / 6;
-    }
-}
-
 .section-wrapper.publication {
     @media screen and (min-width: $breakpoint-medium) {
         grid-column: 2 / 3;
