@@ -1,72 +1,59 @@
-const toggleNavBar = () => {
-    const toggles = Array.from(document.querySelectorAll('[data-toggle="nav-toggle"]'))
+const toggleClass = (item, targetItem) => {
+  if (item.getAttribute('data-toggle')) {
+    targetItem.classList.toggle('toggle')
+  } else {
+    targetItem.classList.remove('toggle')
+  }
+}
 
-    toggles.forEach(toggle => {
-        const targetSelector = toggle.getAttribute('data-target')
-        const target = document.querySelector(targetSelector)
+const toggleVisibility = () => {
+  const toggleItems = Array.from(document.querySelectorAll('[data-toggle]'))
 
-        toggle.addEventListener('click', () => target.classList.toggle('open'))
+  toggleItems.forEach((toggle) => {
+    const targetSelector = toggle.getAttribute('data-target')
+    const targetPiece = document.querySelector(targetSelector)
+
+    toggle.addEventListener('click', function () {
+      toggleClass(this, targetPiece)
     })
+  })
+}
 
+const AnchorJump = (function () {
+  let links
+
+  const setLinks = () => {
+    links = Array.from(document.querySelectorAll('[data-link]'))
   }
 
-  const AnchorJump = (function () {
-    let links
+  const linkAction = function (event) {
+    event.preventDefault()
 
-    const setLinks = () => {
-      links = Array.from(document.querySelectorAll('[data-link]'))
-    }
+    const href = this.getAttribute('href')
+    const target = document.querySelector(href)
 
-    const linkAction = function (event) {
-      event.preventDefault()
+    history.pushState(null, null, href)
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
 
-      const href = this.getAttribute('href')
-      const target = document.querySelector(href)
+  const setLinkAction = () => {
+    links.forEach((link) => link.addEventListener('click', linkAction))
+  }
 
-      history.pushState(null, null, href)
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-    }
+  const init = () => {
+    setLinks()
+    setLinkAction()
+  }
 
-    const setLinkAction = () => {
-      links.forEach((link) => link.addEventListener('click', linkAction))
-    }
+  return {
+    init,
+  }
+})()
 
-    const init = () => {
-      setLinks()
-      setLinkAction()
-    }
-
-    return {
-      init,
-    }
-  })()
-
-  document.addEventListener('DOMContentLoaded', () => {
-    AnchorJump.init()
-    toggleNavBar()
-  })
-
-  /* code content button */
-  const button = document.querySelector('[data-toggle="content-toggle"]');
-  const content = document.querySelector("#code-content");
-  let showContent = false;
-  const buttonState = {
-    "Click to show more examples" : "Click to hide",
-    "Click to hide" : "Click to show more examples"
-  };
-
-  button.addEventListener("click", () => {
-    showContent = !showContent;
-
-    if (showContent === true) {
-      content.style.display = "grid"
-    } else {
-      content.style.display = "none"
-    };
-
-    button.innerText = buttonState[button.innerText];
-
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  AnchorJump.init()
+  toggleVisibility()
+})

@@ -15,11 +15,11 @@
 .main-headline.home:before {
     background: repeating-linear-gradient(
             -45deg,
-            $delicateblue 3px,
+            $pastelgreen 3px,
             $verydarkgray 3px,
             $verydarkgray 6px,
-            $delicateblue 6px,
-            $delicateblue 9px
+            $pastelgreen 6px,
+            $pastelgreen 9px
         ),
         $verydarkgray;
 }
@@ -96,7 +96,7 @@
         $verydarkgray;
 }
 
-.blg-main-headline.extended:before {
+.blg-main-headline.full-article:before {
     background: repeating-linear-gradient(
         -45deg,
         $paleorange 3px,

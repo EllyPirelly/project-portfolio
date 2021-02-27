@@ -4,20 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elle | Blog - Space Ipsum</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
     <meta name="description"
         content="Elle is a Frontend Engineer with a background in print media as digital media designer, image editor and proof reader, now working with HTML, CSS and JavaScript.">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../img/eha-sw-favicon.png">
     <link rel="stylesheet" href="../css/style.scss">
-    <title>Elle | Blog - Space Ipsum</title>
 </head>
+
 <body id="top">
     <div class="outer-wrapper">
         <header class="header-wrapper">
             <a href="/" class="brand-img-container">
-                <img class="brand-img" alt="frontalview of Elle smiling" src="../img/eha-square-sw.jpg">
+                <img class="brand-img" alt="Powerfuff Girls avatar of Elle" src="../img/elle-powerpuff-500x500.png">
             </a>
-            <button class="nav-toggle" data-toggle="nav-toggle" data-target="[data-element=navbar]">
+            <button class="navbutton" data-toggle="nav-toggle" data-target="[data-element=navbar]">
                 <svg class="burger-menu-logo" aria-labelledby="burgerMenuLogo, burgerMenuDesc" fill="currentColor"
                     focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <title id="burgerMenuLogo">A burger menu logo</title>
@@ -28,48 +32,67 @@
                 </svg>
             </button>
             <nav class="navbar" data-element="navbar" role="navigation">
-                <a href="./index#about-me" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">About Me</a>
-                <a href="./index#code" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Code</a>
-                <a href="./index#blog" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Blog</a>
-                <a href="./index#publications" data-toggle="nav-toggle" data-target="[data-element=navbar]"  class="nav-item">Publications</a>
-                <a href="./index#connect" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Connect</a>
+                <a href="/index#about-me" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">About Me</a>
+                <a href="/index#code" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Code</a>
+                <a href="/index#writing" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Writing</a>
+                <a href="/index#connect" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Connect</a>
+                <a href="/de/index.html" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">DE</a>
             </nav>
         </header>
-        <!-- blog -->
-        <main class="blg-wrapper extended">
+        <!-- blog detail page-->
+        <main class="blg-wrapper full-article">
             <!-- sidenav -->
             <nav class="blg-sidenav-wrapper" role="navigation">
-                <section class="blg-sidenav-blog-container">
-                    <h2 class="blg-sidenav-headline">All Blog Posts</h2>
-                    <a href="../blog/space-blog.html" class="blg-sidenav-link">Blog Post 1</a>
-                    <a href="../blog/space-blog.html" class="blg-sidenav-link">Blog Post 2</a>
-                    <a href="../blog/space-blog.html" class="blg-sidenav-link">Blog Post 3</a>
+                <h2 class="blg-sidenav-headline">All Blog Posts</h2>
+                <section class="blg-sidenav-posts-container">
+                    <a href="../blog/my-first-medium-article.html" class="blg-sidenav-link">My first Medium Article</a>
+                    <a href="#" class="blg-sidenav-link">Blog Post 2</a>
+                    <a href="#" class="blg-sidenav-link">Blog Post 3</a>
+                </section>
+                <section class="blg-sidenav-back-btn">
+                    <a href="../blog/blog.html" class="blg-sidenav-back-btn-container wobble-link">
+                        <svg class="blg-sidenav-back-btn-arrow" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M231.536 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113L238.607 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L3.515 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"/>
+                        </svg>
+                        <span class="blg-sidenav-back-btn-text">Back to All Blog Posts</span>
+                    </a>
                 </section>
                 <section class="blg-sidenav-tag-container">
-                    <span>ToDo: tags</span>
+                    <a href="#" class="blg-sidenav-tag-link">
+                        <span class="blg-sidenav-tag coding">TODO One</span>
+                    </a>
+                    <a href="#" class="blg-sidenav-tag-link">
+                        <span class="blg-sidenav-tag life">TODO Two</span>
+                    </a>
+                    <a href="#" class="blg-sidenav-tag-link">
+                        <span class="blg-sidenav-tag travel">TODO Three</span>
+                    </a>
+                    <a href="#" class="blg-sidenav-tag-link">
+                        <span class="blg-sidenav-tag cats">TODO Four</span>
+                    </a>
                 </section>
             </nav>
-            <!-- blog entries -->
-            <section class="blg-entry-wrapper extended">
-                <article class="blg-entry-container extended">
-                    <img src="../img/blog/740_480_blog_space.jpeg" alt="random img - to be replaced" class="blg-hero-img">
-                    <h1 class="blg-main-headline extended">Space Ipsum</h1>
-                    <p class="blg-intro">We are all connected; To each other, biologically. To the earth, chemically. To the rest of the universe atomically.</p>
-                    <hr class="blg-hr-line">
+            <!-- blog entry - detailed -->
+            <section class="blg-entry-wrapper">
+                <article class="blg-entry-container full-article">
+                    <img src="../img/blog/740_450_blg-medium-title.jpg" alt="Two Powerpuff Girls avatars of the author, overlapped by little code snippets" class="blg-hero-img full-article">
+                    <h1 class="blg-main-headline full-article">My first Medium Article</h1>
+                    <p class="blg-intro">Experiences and thoughts about publishing.</p>
+                    <hr class="hr-line">
                     <section class="blg-author-wrapper">
                         <span class="blg-author-container">
-                            <img src="../img/eha-square-sw.jpg" class="blg-author-img" alt="frontalview of Elle smiling">
+                            <img src="../img/elle-powerpuff-500x500.png" class="blg-author-img" alt="Powerfuff Girls avatar of Elle">
                             <span class="blg-name-date-container">
                                 <span class="blg-author-name">Elle Hanschen</span>
-                                <span class="blg-pub-date">Publish Date: January 1st 2021</span>
+                                <span class="blg-pub-date">Publish Date: xxx</span>
                             </span>
                         </span>
                     </section>
-                    <hr class="blg-hr-line">
+                    <hr class="hr-line">
                     <h3 class="blg-second-headline">We choose to go to the moon</h3>
                     <p class="blg-main-text">We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win.</p>
                     <div class="blg-second-img-wrapper">
-                        <img src="../img/blog/740_480_blog_space.jpeg" alt="random img - to be replaced" class="blg-second-img">
+                        <img src="../img/blog/740_450_blg-medium-title.jpg" alt="Two Powerpuff Girls avatars of the author, overlapped by little code snippets" class="blg-second-img full-article">
                         <span class="blg-img-caption">We choose to go to the moon</span>
                     </div>
                     <p class="blg-main-text">There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>

@@ -1,0 +1,13 @@
+/* brand img */
+.brand-img-container {
+    position: absolute;
+}
+
+.brand-img {
+    background-color: $delicateblue;
+    border: 2px solid $paleorange;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px $delicateblue;
+    height: 100px;
+    object-fit: cover;
+}
