@@ -21,7 +21,7 @@
             <a href="/" class="brand-img-container">
                 <img class="brand-img" alt="Powerfuff Girls avatar of Elle" src="/img/elle-powerpuff-500x500.png">
             </a>
-            <button class="nav-toggle" data-toggle="nav-toggle" data-target="[data-element=navbar]">
+            <button class="navbutton" data-toggle="nav-toggle" data-target="[data-element=navbar]">
                 <svg class="burger-menu-logo" aria-labelledby="burgerMenuLogo, burgerMenuDesc" fill="currentColor"
                     focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <title id="burgerMenuLogo">A burger menu logo</title>
@@ -39,30 +39,51 @@
                 <a href="/de/index.html" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">DE</a>
             </nav>
         </header>
-        <!-- blog -->
+        <!-- blog overview-->
         <main class="blg-wrapper">
             <!-- sidenav -->
             <nav class="blg-sidenav-wrapper" role="navigation">
-                <section class="blg-sidenav-blog-container">
-                    <h2 class="blg-sidenav-headline">All Blog Posts</h2>
-                    <a href="/blog/space-blog.html" class="blg-sidenav-link">Blog Post 1</a>
+                <h2 class="blg-sidenav-headline">All Blog Posts</h2>
+                <section class="blg-sidenav-posts-container">
+                    <a href="/blog/my-first-medium-article.html" class="blg-sidenav-link">My first Medium Article</a>
                     <a href="#" class="blg-sidenav-link">Blog Post 2</a>
                     <a href="#" class="blg-sidenav-link">Blog Post 3</a>
                 </section>
+                <section class="blg-sidenav-back-btn">
+                    <a href="/index#about-me" class="blg-sidenav-back-btn-container wobble-link">
+                        <svg class="blg-sidenav-back-btn-arrow" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M231.536 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113L238.607 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L3.515 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"/>
+                        </svg>
+                        <span class="blg-sidenav-back-btn-text">Back to Homepage</span>
+                    </a>
+                </section>
                 <section class="blg-sidenav-tag-container">
-                    <span>ToDo: tags</span>
+                    <a href="#" class="blg-sidenav-tag-link">
+                        <span class="blg-sidenav-tag coding">TODO One</span>
+                    </a>
+                    <a href="#" class="blg-sidenav-tag-link">
+                        <span class="blg-sidenav-tag life">TODO Two</span>
+                    </a>
+                    <a href="#" class="blg-sidenav-tag-link">
+                        <span class="blg-sidenav-tag travel">TODO Three</span>
+                    </a>
+                    <a href="#" class="blg-sidenav-tag-link">
+                        <span class="blg-sidenav-tag cats">TODO Four</span>
+                    </a>
                 </section>
             </nav>
-            <!-- blog entries -->
+            <!-- blog entry - snippets -->
             <section class="blg-entry-wrapper">
                 <article class="blg-entry-container">
-                    <h1 class="blg-main-headline">Space Ipsum</h1>
-                    <img src="/img/blog/740_480_blog_space.jpeg" alt="random img - to be replaced" class="blg-hero-img">
-                    <p class="blg-intro">We are all connected; To each other, biologically. To the earth, chemically. To the rest of the universe atomically.</p>
-                    <a href="/blog/space-blog.html" class="wobble-link blog" aria-label="click to get to blog post" rel="noopener noreferrer">
+                    <a href="/blog/my-first-medium-article.html" class="blg-full-article-link">
+                        <h1 class="blg-main-headline">My first Medium Article</h1>
+                        <img src="/img/blog/740_450_blg-medium-title.jpg" alt="Two Powerpuff Girls avatars of the author, overlapped by little code snippets" class="blg-hero-img">
+                        <p class="blg-intro">Experiences and thoughts about writing and publishing my first article.</p>
+                    </a>
+                    <a href="/blog/my-first-medium-article.html" class="wobble-link blog" aria-label="click to get to blog post" rel="noopener noreferrer">
                         <p class="wobble-text blog">Read more ...</p>
-                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M291.838 35.838L263.57 64.106l171.904 171.905H0v39.978h435.474L263.57 447.894l28.268 28.268L512 256z"></path>
+                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/>
                         </svg>
                     </a>
                 </article>
@@ -79,13 +100,15 @@
                 </svg>
             </div>
                 <article class="blg-entry-container">
-                    <h1 class="blg-main-headline">Kitten Ipsum</h1>
-                    <img src="/img/blog/740_480_blog-kitten.jpeg" alt="random img - to be replaced" class="blg-hero-img">
-                    <p class="blg-intro">Meow behind the couch, or throw down all the stuff in the kitchen ears back wide eyed find something else more interesting.</p>
+                    <a href="#" class="blg-full-article-link">
+                        <h1 class="blg-main-headline">Kitten Ipsum</h1>
+                        <img src="/img/blog/740_480_blog-kitten.jpeg" alt="random img - to be replaced" class="blg-hero-img">
+                        <p class="blg-intro">Meow behind the couch, or throw down all the stuff in the kitchen ears back wide eyed find something else more interesting.</p>
+                    </a>
                     <a href="#" class="wobble-link blog" aria-label="click to get to blog post" rel="noopener noreferrer">
                         <p class="wobble-text blog">Read more ...</p>
-                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M291.838 35.838L263.57 64.106l171.904 171.905H0v39.978h435.474L263.57 447.894l28.268 28.268L512 256z"></path>
+                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/>
                         </svg>
                     </a>
                 </article>
@@ -102,13 +125,15 @@
                 </svg>
             </div>
                 <article class="blg-entry-container">
-                    <h1 class="blg-main-headline">CSS Grid Ipsum</h1>
-                    <img src="/img/blog/740_480_blog_grid.png" alt="random img - to be replaced" class="blg-hero-img">
-                    <p class="blg-intro">CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows.</p>
+                    <a href="#" class="blg-full-article-link">
+                        <h1 class="blg-main-headline">CSS Grid Ipsum</h1>
+                        <img src="/img/blog/740_480_blog_grid.png" alt="random img - to be replaced" class="blg-hero-img">
+                        <p class="blg-intro">CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows.</p>
+                    </a>
                     <a href="#" class="wobble-link blog" aria-label="click to get to blog post" rel="noopener noreferrer">
                         <p class="wobble-text blog">Read more ...</p>
-                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M291.838 35.838L263.57 64.106l171.904 171.905H0v39.978h435.474L263.57 447.894l28.268 28.268L512 256z"></path>
+                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/>
                         </svg>
                     </a>
                 </article>
