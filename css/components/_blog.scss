@@ -1,3 +1,15 @@
+/* blog quote */
+.blg-quote-container {
+    margin-left: -20px;
+    padding-left: 24px;
+    box-shadow: inset 3px 0 0 0 $verydarkgray;
+    margin: 2.5em 0;
+}
+.blg-quote {
+    font-size: 1.25em;
+    font-style: italic;
+}
+
 /* blog wrapper */
 .blg-wrapper {
     margin-top: 4.5em;
@@ -159,7 +171,12 @@
     }
 }
 
-.blg-full-article-link {
+.blg-article-snippet-link {
+    text-decoration: none;
+}
+
+.blg-link-full-article:hover {
+    background-color: #eef2f7;
     text-decoration: none;
 }
 
@@ -198,6 +215,7 @@
 .blg-second-headline {
     font-size: 1.5em;
     font-weight: 500;
+    margin-top: 42px;
 }
 
 .blg-second-img {
