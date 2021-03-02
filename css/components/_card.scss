@@ -201,7 +201,6 @@
 .extra-content-button {
     color: $verydarkgray;
     background-color: $paleorange;
-    border: 1px solid $verydarkgray;
     box-shadow: 0 0 10px 0 $mediumgray;
     font-family: "Bitter", serif;
     font-size: 1em;
@@ -211,9 +210,7 @@
     padding: 1em;
 
     &:hover {
-        background-color: $darkmediumgray;
-        border: 1px solid $lightgray;
-        color: $lightgray;
+        background-color: $blissfulbluelight;
         cursor: pointer;
     }
 

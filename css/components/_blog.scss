@@ -13,7 +13,11 @@
 /* blog wrapper */
 .blg-wrapper {
     margin-top: 4.5em;
-    padding: 0 1.5em;
+    padding: 0 2em;
+
+    @media screen and (min-width: $breakpoint-small) {
+        padding: 3em;
+    }
 
     @media screen and (min-width: $breakpoint-medium) {
         display: flex;
@@ -240,15 +244,4 @@
 .blg-seperator-svg {
     height: 1.5em;
     margin: 0 0.3em;
-}
-
-/* blog footer scroll to top */
-.blg-footer-top-link {
-    margin: 1.25em 0;
-    padding: 0 2em;
-    text-align: right;
-}
-
-a.blog-scroll-to-top {
-    padding: 0.5em;
 }
