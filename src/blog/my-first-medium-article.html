@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elle | Blog - Overview</title>
+    <title>Elle | Blog - Space Ipsum</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -12,14 +12,14 @@
     <meta name="description"
         content="Elle is a Frontend Engineer with a background in print media as digital media designer, image editor and proof reader, now working with HTML, CSS and JavaScript.">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/scss/style.scss">
+    <link rel="stylesheet" href="../scss/style.scss">
 </head>
 
 <body id="top">
     <div class="outer-wrapper">
         <header class="header-wrapper">
             <a href="/" class="brand-img-container">
-                <img class="brand-img" alt="Powerfuff Girls avatar of Elle" src="/src/img/elle-powerpuff-500x500.png">
+                <img class="brand-img" alt="Powerfuff Girls avatar of Elle" src="../img/elle-powerpuff-500x500.png">
             </a>
             <button class="navbutton" data-toggle="nav-toggle" data-target="[data-element=navbar]">
                 <svg class="burger-menu-logo" aria-labelledby="burgerMenuLogo, burgerMenuDesc" fill="currentColor"
@@ -36,25 +36,25 @@
                 <a href="/index#code" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Code</a>
                 <a href="/index#writing" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Writing</a>
                 <a href="/index#connect" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">Connect</a>
-                <a href="/de/index.html" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">DE</a>
+                <a href="../de/index.html" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">DE</a>
             </nav>
         </header>
-        <!-- blog overview-->
-        <main class="blg-wrapper">
+        <!-- blog detail page-->
+        <main class="blg-wrapper full-article">
             <!-- sidenav -->
             <nav class="blg-sidenav-wrapper" role="navigation">
                 <h2 class="blg-sidenav-headline">All Blog Posts</h2>
                 <section class="blg-sidenav-posts-container">
-                    <a href="/blog/my-first-medium-article.html" class="blg-sidenav-link">My first Medium article</a>
+                    <a href="./my-first-medium-article.html" class="blg-sidenav-link">My first Medium article</a>
                     <a href="#" class="blg-sidenav-link">Blog Post 2</a>
                     <a href="#" class="blg-sidenav-link">Blog Post 3</a>
                 </section>
                 <section class="blg-sidenav-back-btn">
-                    <a href="/index#about-me" class="blg-sidenav-back-btn-container wobble-link">
+                    <a href="./blog.html" class="blg-sidenav-back-btn-container wobble-link">
                         <svg class="blg-sidenav-back-btn-arrow" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path d="M231.536 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113L238.607 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L3.515 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"/>
                         </svg>
-                        <span class="blg-sidenav-back-btn-text">Back to Homepage</span>
+                        <span class="blg-sidenav-back-btn-text">Blog Posts Overview</span>
                     </a>
                 </section>
                 <section class="blg-sidenav-tag-container">
@@ -72,83 +72,81 @@
                     </a>
                 </section>
             </nav>
-            <!-- blog entry - snippets -->
+            <!-- blog entry - detailed -->
             <section class="blg-entry-wrapper">
-                <article class="blg-entry-container">
-                    <a href="/blog/my-first-medium-article.html" class="blg-article-snippet-link">
-                        <h1 class="blg-main-headline">My first Medium article</h1>
-                        <img src="/src/img/blog/740_450_blg-medium-title.jpg" alt="Two Powerpuff Girls avatars of the author, overlapped by little code snippets" class="blg-hero-img">
-                        <p class="blg-intro">Thoughts about writing and publishing my first article.</p>
-                    </a>
-                    <a href="/blog/my-first-medium-article.html" class="wobble-link blog" aria-label="click to get to blog post" rel="noopener noreferrer">
-                        <p class="wobble-text blog">Read more ...</p>
+                <article class="blg-entry-container full-article">
+                    <img src="../img/blog/740_450_blg-medium-title.jpg" alt="Two Powerpuff Girls avatars of the author, overlapped by little code snippets" class="blg-hero-img full-article">
+                    <h1 class="blg-main-headline full-article">My first Medium article</h1>
+                    <p class="blg-intro">Thoughts about writing and publishing my first article.</p>
+                    <hr class="hr-line">
+                    <section class="blg-author-wrapper">
+                        <span class="blg-author-container">
+                            <img src="../img/elle-powerpuff-500x500.png" class="blg-author-img" alt="Powerfuff Girls avatar of Elle">
+                            <span class="blg-name-date-container">
+                                <span class="blg-author-name">Elle Hanschen</span>
+                                <span class="blg-pub-date">Publish Date: March 1st 2021</span>
+                            </span>
+                        </span>
+                    </section>
+                    <hr class="hr-line">
+                    <h3 class="blg-second-headline">Why should I write and publish? What are my goals in doing so?</h3>
+                    <p class="blg-main-text">There's a couple of things to mention here. First of all, it's a language thing. In an environment where English is THE language, writing in English will improve my skills.</p>
+                    <p class="blg-main-text">The next thing is documentations. Apparently every Engineer knows how important documenting is - but nobody wants to do it. I'm none of those persons I LOVE sharing knowledge and documenting. So why not getting better in structuring myself when writing and practicing to get better in documenting?</p>
+                    <p class="blg-main-text">This leads to the third thing: I want to help and give back as I'm greatly benefitting of what others put out there. Here, I want to also give a voice to the perspective of a career changer without Computer Science studies.</p>
+                    <p class="blg-main-text">And last but not least: I want to build a mix of articles to reference to as in the engineering world it's expected to publish at some point of your career. I want to show myself as an Engineer and future employee.</p>
+                    <div class="blg-second-img-wrapper">
+                        <img src="../img/blog/blg-medium-questionmark.jpg" alt="a question mark on a dark background" class="blg-second-img full-article">
+                        <span class="blg-img-caption">So many questions...</span>
+                    </div>
+                    <h3 class="blg-second-headline">Why Medium as a platform?</h3>
+                    <p class="blg-main-text">The idea of giving back to the platform I'm greatly benefitting from was a no-brainer for me. It's a great platform to publish programming stuff. It has a proper reach. Other engineers publish there, too. So Medium it was.</p>
+                    <h3 class="blg-second-headline">Thoughts on "owning your own content"</h3>
+                    <p class="blg-main-text">Of course I had some thoughts and mixed feelings about "giving up" ownership of my content in putting my writing out on Medium instead of hosting it on my own site. Here, my dislike for Medium trying to lure you into a payed account after reading 5 articles a day definitely added to the CON. But - even though I'm a big fan of owning your own content - as I don't publish 7 articles a week, as I have next to no reach and as I want to give back and help others - for now publishing on Medium (or maybe also other tech platforms in the future) is ok with me.</p>
+                    <a href="https://elly-pirelly.medium.com/how-i-improved-my-favicon-game-b848756e780c" class="wobble-link blog blg-link-full-article" aria-label="click to get to blog post" rel="noopener noreferrer">
+                        <p class="wobble-text blog">See here for my first Medium article ...</p>
                         <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/>
+                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"></path>
                         </svg>
                     </a>
+                    <h3 class="blg-second-headline">What to publish?</h3>
+                    <p class="blg-main-text">As it was now clear to me that I want to write about job-related, technical stuff - which kind of topic to pick? Especially, with this quote in the back of my head:</p>
+                    <blockquote class="blg-quote-container">
+                        <p class="blg-quote">"Opinions are like buttholes, everyone has one, but nobody wants to hear about yours!"</p>
+                    </blockquote>
+                    <p class="blg-main-text">How to approach writing about topics where apparently everything has been said about already?</p>
+                    <p class="blg-main-text">Solution: focus on what's most valuable for ME to write about, at this time of my career. Focus, on what brings ME forward in learning and growing.</p>
+                    <p class="blg-main-text">In that sense my intention was to not write for others in terms of proving that I'm extra smart and bring new Einstein-ishy insights. I intentionally wanted to try to let myself do mistakes.</p>
+                    <p class="blg-main-text">So I looked for small topics I could get familiar with rather easily - I then selected the topic favicons as I was working on better implementing them anyhow.</p>
+                    <p class="blg-main-text">Focussing on the above should also help me to fight Imposter Syndrome. Everyone has been a starter at some point, right?</p>
+                    <h3 class="blg-second-headline">Techniques - Photoshop, Medium, et all</h3>
+                    <p class="blg-main-text">To be honest, figuring all of this out delayed my ambitious time goal quite a bit.</p>
+                    <p class="blg-main-text">Ambitious, as I was assuming while having the article in my head written down already, I will have it written down for real in 2 hours - not.</p>
+                    <p class="blg-main-text">I needed to figure out so many things.</p>
+                    <p class="blg-main-text">I re-learned Photoshop Elements on the way. I used to work with Photoshop CS5 back in the day and very infrequently Photoshop CC so I needed to figure out how all of them differ and what possibilities Photoshop Elements has.</p>
+                    <p class="blg-main-text">As the last time I did gifs has been around 2009, I needed to figure out how to do them with free tools out there, also finding the tools fitting for my needs. I ended up using <a href="https://helpfeel.com/Gyazo/Gyazo%20GIF-5de75e1e040e1d0017df4379" class="blg-link-full-article">the Gyazo gif app.</a> This tool will give you a 7 seconds max gif. I didn't even register on that website as you can immediately download either a gif or a video without registering. At the moment I'm still figuring out, if I need to put both through <a href="https://gif.ski/" class="blg-link-full-article">Gifski</a> to get a better result. I'm not done with looking into that and decided for the first time publishing to be ok with the outcome.</p>
+                    <p class="blg-main-text">And of course I also needed to find out how Medium works, the shortfalls, the options, especially when it came to file sizes of images and gifs. Medium in general seems to be sufficient to work with but then again for someone coming from a digital media designer background and also used to work with a quite mighty Pimcore CMS, it's too limited. Why, for example, can't I have a proper drop shadow for images?</p>
+                    <h3 class="blg-second-headline">Conclusion</h3>
+                    <p class="blg-main-text">As I now know how to work with Photoshop Elements, gifs and Medium, I will be faster regarding the techniques the next time. What I came to notice though is, that as an overthinker I literally reflect over everything I write at least 4 times. Here, I want to get better in have things sound good at the first go.</p>
+                    <p class="blg-main-text">Language is not necessarily a hindrance but then again, it is. Sometimes phrasing something takes longer than it would in my first language.</p>
+                    <div class="blg-second-img-wrapper">
+                        <img src="../img/blog/blg-medium-aha-moment.jpg" alt="a lightbulb on a dark background" class="blg-second-img full-article">
+                        <span class="blg-img-caption">...lead to some insights</span>
+                    </div>
+                    <p class="blg-main-text">Getting familiar with the topic I'm writing about AND at the same time writing the article cost me time as I needed some extra rounds for rephrasing, restructuring and updating content. That's ok and I will plan for this in the future.</p>
+                    <p class="blg-main-text">Generally planning for more time is a good idea. There's no need for pressure, so I will always take the time to properly set up an article, collect thoughts, structure them and create the content needed. I would also plan to let a first draft sit a night and iterate on it until satisfied. The key here is, set realistic publish dates. And then PUBLISH.</p>
+                    <p class="blg-main-text">Last thought: Since time of publishing (5 days) I had 3 views on that article so it's really not worth sweating publishing - just do it.</p>
                 </article>
-                <!-- blog entry seperator -->
-            <div class="blg-seperator-container">
-                <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
-                </svg>
-                <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
-                </svg>
-                <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
-                </svg>
-            </div>
-                <article class="blg-entry-container">
-                    <a href="#" class="blg-article-snippet-link">
-                        <h1 class="blg-main-headline">Kitten Ipsum</h1>
-                        <img src="/src/img/blog/740_480_blog-kitten.jpeg" alt="random img - to be replaced" class="blg-hero-img">
-                        <p class="blg-intro">Meow behind the couch, or throw down all the stuff in the kitchen ears back wide eyed find something else more interesting.</p>
-                    </a>
-                    <a href="#" class="wobble-link blog" aria-label="click to get to blog post" rel="noopener noreferrer">
-                        <p class="wobble-text blog">Read more ...</p>
-                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/>
-                        </svg>
-                    </a>
-                </article>
-                <!-- blog entry seperator -->
-            <div class="blg-seperator-container">
-                <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
-                </svg>
-                <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
-                </svg>
-                <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
-                </svg>
-            </div>
-                <article class="blg-entry-container">
-                    <a href="#" class="blg-article-snippet-link">
-                        <h1 class="blg-main-headline">CSS Grid Ipsum</h1>
-                        <img src="/src/img/blog/740_480_blog_grid.png" alt="random img - to be replaced" class="blg-hero-img">
-                        <p class="blg-intro">CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows.</p>
-                    </a>
-                    <a href="#" class="wobble-link blog" aria-label="click to get to blog post" rel="noopener noreferrer">
-                        <p class="wobble-text blog">Read more ...</p>
-                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/>
-                        </svg>
-                    </a>
-                </article>
-                <!-- blog entry seperator -->
-            <div class="blg-seperator-container">
-                <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
-                </svg>
-                <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
-                </svg>
-                <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
-                </svg>
-            </div>
+                <div class="blg-seperator-container">
+                    <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
+                    </svg>
+                    <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
+                    </svg>
+                    <svg class="blg-seperator-svg blg-pen" fill="currentColor" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M493.25 56.26l-37.51-37.51C443.24 6.25 426.86 0 410.49 0c-16.38 0-32.76 6.25-45.25 18.74l-67.88 67.88L274.74 64c-12.5-12.5-32.76-12.5-45.25 0L99.37 194.12c-3.12 3.12-3.12 8.19 0 11.31l11.31 11.31c3.12 3.12 8.19 3.12 11.31 0L252.1 86.63l22.62 22.62L93.95 290.03A327.038 327.038 0 00.17 485.12l-.03.23C-1.45 499.72 9.88 512 23.95 512c5.73 0 111.06-6.99 198.03-93.95l271.28-271.28c24.99-25 24.99-65.52-.01-90.51zm-293.9 339.16c-45 45-103.93 74.41-166.1 83.39 9.13-62.64 38.5-121.32 83.34-166.16l180.77-180.77.01.01.01-.01 82.76 82.76-180.79 180.78zm271.28-271.28l-67.88 67.88-82.77-82.77 67.88-67.88c12.5-12.5 32.74-12.51 45.25 0l37.51 37.51c12.51 12.5 12.52 32.74.01 45.26z"/>
+                    </svg>
+                </div>
             </section>
         </main>
         <!-- blog footer scroll to top -->
@@ -238,7 +236,7 @@
             </div>
         </footer>
     </div>
-    <script src="/src/js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

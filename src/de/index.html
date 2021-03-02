@@ -1,77 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elle | Home</title>
+    <title>Elle | Startseite</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="description"
-        content="Elle is a Frontend Engineer with a background in print media as digital media designer, image editor and proof reader, now working with HTML, CSS and JavaScript.">
+        content="Elle ist ein Frontend Engineer mit dem Hintergrund langjähriger Berufserfahrung als Mediengestalter Print, Bildbearbeiter und Korrektor, nun arbeitend mit HTML, CSS und JavaScript.">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/scss/style.scss">
+    <link rel="stylesheet" href="../scss/style.scss">
 </head>
 
 <body id="top">
     <div class="outer-wrapper">
         <header class="header-wrapper">
             <a href="/" class="brand-img-container">
-                <img class="brand-img" alt="Powerfuff Girls avatar of Elle" src="./src/img/elle-powerpuff-500x500.png">
+                <img class="brand-img" alt="Powerfuff-Girls-Avatar von Elle" src="../img/elle-powerpuff-500x500.png">
             </a>
             <button class="navbutton" data-toggle="nav-toggle" data-target="[data-element=navbar]">
                 <svg class="burger-menu-logo" aria-labelledby="burgerMenuLogo, burgerMenuDesc" fill="currentColor"
                     focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <title id="burgerMenuLogo">A burger menu logo</title>
-                    <desc id="burgerMenuDesc">A burger menu logo showing on mobile devices, which on click opens a list
-                        of menu points</desc>
+                    <title id="burgerMenuLogo">Ein Burger-Menü-Logo</title>
+                    <desc id="burgerMenuDesc">Ein Burger-Menü-Logo für mobile Geräte welches auf Klick eine Liste von Menü-Unterpunkten öffnet</desc>
                     <path
                         d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
                 </svg>
             </button>
             <nav class="navbar" data-element="navbar" role="navigation">
-                <a href="#about-me" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">About Me</a>
+                <a href="#about-me" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Über mich</a>
                 <a href="#code" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Code</a>
-                <a href="#writing" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Writing</a>
-                <a href="#connect" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Connect</a>
-                <a href="./de/index.html" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">DE</a>
+                <a href="#writing" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Publikationen</a>
+                <a href="#connect" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link class="nav-item">Kontakt</a>
+                <a href="../index.html" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">EN</a>
             </nav>
         </header>
         <main class="main-wrapper">
             <section id="home" class="section-wrapper home">
                 <div class="home-container">
-                    <h1 class="main-headline home">Hi! I'm Elle</h1>
-                    <img src="./src/img/740-IMG_1625-landscape-sw.jpg"
-                        alt="the Brandenburg Gate in Berlin as seen from the Pariser Platz" class="home-img">
-                    <h2 class="second-headline home">a North Sea coast transplant living in Berlin, Germany.</h2>
-                    <p class="main-text home">As a career-changer late in life, I've internalized that you never stop
-                        learning.</p>
-                    <p class="main-text home">The site you're currently visiting is my playground to get better in what
-                        I do, it's an ongoing work in progress.</p>
+                    <h1 class="main-headline home">Hallo, ich bin Elle!</h1>
+                    <img src="../img/740-IMG_1625-landscape-sw.jpg"
+                        alt="das Brandenburger Tor aus Richtung Pariser Platz" class="home-img">
+                    <h2 class="second-headline home">In Cuxhaven geboren und in der Mitte des Elbe-Weser-Dreiecks aufgewachsen hat es mich nach Berlin verschlagen.</h2>
+                    <p class="main-text home">Als jemand der spät im Leben nochmal ganz neu angefangen hat ist mir bewusst wie wichtig es ist niemals aufzuhören zu lernen.</p>
+                    <p class="main-text home">Diese Seite hier ist mein Spielplatz um Dinge auszuprobieren - um besser zu werden in dem was ich tue.</p>
                 </div>
             </section>
             <!-- about me -->
             <span id="about-me"></span>
             <section class="section-wrapper about">
                 <div class="about-container">
-                    <h1 class="main-headline about">About Me</h1>
-                    <img src="./src/img/740-IMG_8327-bw.jpg"
-                        alt="Elle and her husband on a rainy day, standing on the Straße des 17. Juni"
+                    <h1 class="main-headline about">Über mich</h1>
+                    <img src="../img/740-IMG_8327-bw.jpg"
+                        alt="Elle und ihr Mann an einem regnerischen Tag auf der Straße des 17. Juni stehend"
                         class="about-img">
-                    <p class="main-text about">I'm a Frontend Engineer, living in Berlin with my husband Jörg and our
-                        senior cats Peaches and Simon.</p>
-                    <p class="main-text about">With my background of 26 years in print media as digital media designer,
-                        image editor and proof reader, I'm working on and improving in merging the digital and physical
-                        world - to turn things into semantic HTML and subjectively pretty CSS.</p>
-                        <p class="main-text about">One of the things I'm currently doing is to work myself through
-                            <a href="https://frontendmasters.com/courses/" class="link-style">Frontendmasters tutorials</a> and <a href="https://www.freecodecamp.org/news/" class="link-style">Freecodecamp arcicles</a> - always aiming to code-along.
-                        </p>
-                    <p class="main-text about">When I'm not working, you might catch me training for my next run, find
-                        me getting my socks rocked off at a gig or spot me strolling around in a museum or gallery.</p>
-                    <p class="main-text about">Pre-Corona I loved to travel, I hope to be able to pick this up again
-                        some day soon.</p>
+                    <p class="main-text about">Arbeitend als Frontend Engineer lebe ich zusammen mit meinem Mann Jörg und unseren Senior-Katzen Peaches und Simon in Berlin.</p>
+                    <p class="main-text about">Mit meinem Hintergrund von 26 Jahren Berufserfahrung im Druckereiwesen als Mediengestalter Print, Bildbearbeiter und Korrektor arbeite ich daran diese physikalische Welt mit der digitalen Welt des Programmierens zu vereinen um Projekte in semantischem HTML und (subjektiv) schönem CSS zu realisieren.</p>
+                    <p class="main-text about">Momentan nehme ich mir intensiver Zeit um durch
+                        <a href="https://frontendmasters.com/courses/" class="link-style">Frontendmasters-Tutorials</a> und <a href="https://www.freecodecamp.org/news/" class="link-style">Freecodecamp-Artikel</a> zu gehen - immer mit der Absicht dazu parallel zu coden.
+                    </p>
+                    <p class="main-text about">Wenn ich nicht grade arbeite, findet man mich trainierend für meinen nächsten Lauf, tanzend auf einem Konzert oder wandernd durch ein Museum oder eine Gallery.</p>
+                    <p class="main-text about">Pre-Corona stand reisen ganz oben auf meiner Liste. Ich hoffe bald wieder mehr von der Welt sehen zu können außer meinem Appartement.</p>
                 </div>
             </section>
             <!-- code -->
@@ -83,40 +75,38 @@
                         <div class="overlay-container">
                             <a href="https://github.com/EllyPirelly/project-wesbos-grid-image-gallery" target="_blank"
                             rel="noopener noreferrer">
-                                <img class="overlay-img" src="./src/img/example/ex-github-cssgrid-gallery.jpg"
-                                alt="desktop screenshot of the website 'css grid image gallery'">
+                                <img class="overlay-img" src="../img/example/ex-github-cssgrid-gallery.jpg"
+                                alt="Desktop-Bildschirmfoto der Seite 'CSS Grid Image Gallery'">
                                 <div class="overlay-textcontainer">
-                                    <div class="overlay-text">GitHub: first steps in CSS Grid, based on Wes Bos' CSS Grid course</div>
+                                    <div class="overlay-text">GitHub: Erste Versuche mit CSS Grid, basierend auf Wes Bos' CSS-Grid-Kurs</div>
                                 </div>
                             </a>
                         </div>
                         <div class="overlay-container">
                             <a href="https://codepen.io/ellypirelly/pen/YzpYRdv" target="_blank"
                             rel="noopener noreferrer">
-                                <img class="overlay-img" src="./src/img/example/ex-codepen-checkboxhack-toggle.jpg"
-                                alt="desktop screenshot of a 'checkbox hack' toggle button">
+                                <img class="overlay-img" src="../img/example/ex-codepen-checkboxhack-toggle.jpg"
+                                alt="Desktop-Bildschirmfoto des 'checkbox hack' toggle button">
                                 <div class="overlay-textcontainer">
-                                    <div class="overlay-text">CodePen: simple example of a "checkbox hack" toggle button</div>
+                                    <div class="overlay-text">CodePen: einfaches Beispiel eines "checkbox hack" toggle button</div>
                                 </div>
                             </a>
                         </div>
                         <div class="overlay-container">
                             <a href="https://github.com/EllyPirelly/project-resp-site-with-refresh" target="_blank"
                             rel="noopener noreferrer">
-                                <img class="overlay-img" src="./src/img/example/ex-github-site-refresh.jpg"
-                                alt="desktop screenshot of the website with 'refresh' button">
+                                <img class="overlay-img" src="../img/example/ex-github-site-refresh.jpg"
+                                alt="Desktop-Bildschirmfoto der Webseite mit 'refresh'-Button">
                                 <div class="overlay-textcontainer">
-                                    <div class="overlay-text">GitHub: website with "refresh site" button</div>
+                                    <div class="overlay-text">GitHub: Webseite mit "refresh site"-Button</div>
                                 </div>
                             </a>
                         </div>
                         <div class="overlay-container">
-                            <a href="https://github.com/EllyPirelly/project-flexbox-grid-page-layout" target="_blank"
-                            rel="noopener noreferrer">
-                                <img class="overlay-img" src="./src/img/example/ex-github-pie-gallery.jpg"
-                                alt="desktop screenshot of the website 'pie gallery', homepage">
+                            <a href="https://github.com/EllyPirelly/project-flexbox-grid-page-layout" target="_blank" rel="noopener noreferrer">
+                                <img class="overlay-img" src="../img/example/ex-github-pie-gallery.jpg" alt="Desktop-Bildschirmfoto der Homepage der Website 'Pie Gallery'">
                                 <div class="overlay-textcontainer">
-                                    <div class="overlay-text">GitHub: website, based on Frontendmasters' "CSS Grid and Flexbox for Responsive Web Design"</div>
+                                    <div class="overlay-text">GitHub: Webseite basierend auf Frontendmasters' "CSS Grid and Flexbox for Responsive Web Design"</div>
                                 </div>
                             </a>
                         </div>
@@ -124,87 +114,87 @@
                     <!-- additional code on click -->
                     <section class="extra-content-wrapper" data-element="extra-content">
                         <button class="extra-content-button" data-toggle="extra-content-toggle" data-target="[data-element=extra-content]">
-                            <span class="button-text-more">Click for more examples</span>
-                            <span class="button-text-less">Click for less</span>
+                            <span class="button-text-more">Klicke für mehr</span>
+                            <span class="button-text-less">Klicke für weniger</span>
                         </button>
                         <div class="extra-examples-wrapper">
                             <div class="overlay-container">
                                 <a href="https://github.com/EllyPirelly/project-privacy-dialog" target="_blank"
                                 rel="noopener noreferrer">
-                                    <img class="overlay-img" src="./src/img/example/ex-github-privacy-dialog.jpg"
-                                    alt="desktop screenshot of the website 'privacy dialoge'">
+                                    <img class="overlay-img" src="../img/example/ex-github-privacy-dialog.jpg"
+                                    alt="Desktop-Bildschirmfoto der Webseite des 'Privatsphären-Dialogs'">
                                     <div class="overlay-textcontainer">
-                                        <div class="overlay-text">GitHub: website "privacy dialoge"</div>
+                                        <div class="overlay-text">GitHub: Webseite "Privatsphären-Dialog"</div>
                                     </div>
                                 </a>
                             </div>
                             <div class="overlay-container">
                                 <a href="https://codepen.io/ellypirelly/pen/BaQQeqR" target="_blank"
                                 rel="noopener noreferrer">
-                                    <img class="overlay-img" src="./src/img/example/ex-codepen-eventlistener-toggle.jpg"
-                                    alt="desktop screenshot of an addEventListener toggle example">
+                                    <img class="overlay-img" src="../img/example/ex-codepen-eventlistener-toggle.jpg"
+                                    alt="Desktop-Bildschirmfoto des addEventListener toggle">
                                     <div class="overlay-textcontainer">
-                                        <div class="overlay-text">CodePen: simple example of an addEventListener toggle</div>
+                                        <div class="overlay-text">CodePen: einfaches Beispiel eines "addEventListener toggle</div>
                                     </div>
                                 </a>
                             </div>
                             <div class="overlay-container">
                                 <a href="https://github.com/EllyPirelly/project-integrate-library" target="_blank"
                                 rel="noopener noreferrer">
-                                    <img class="overlay-img" src="./src/img/example/ex-github-animation.jpg"
-                                    alt="desktop screenshot of website with integrated 'popmotion animation'">
+                                    <img class="overlay-img" src="../img/example/ex-github-animation.jpg"
+                                    alt="Desktop-Bildschirmfoto der Webseite mit integrierter Popmotion-Animation">
                                     <div class="overlay-textcontainer">
-                                        <div class="overlay-text">GitHub: animation, based on Frontendmasters' "Intro to Web Development" (integrate popmotion library)</div>
+                                        <div class="overlay-text">GitHub: animation, basierend auf Frontendmasters' "Intro to Web Development" (Integration von Popmotion-Library)</div>
                                     </div>
                                 </a>
                             </div>
                             <div class="overlay-container">
                                 <a href="https://github.com/EllyPirelly/project-simple-calculator" target="_blank"
                                 rel="noopener noreferrer">
-                                    <img class="overlay-img" src="./src/img/example/ex-github-calculator.jpg"
-                                    alt="desktop screenshot of the project 'simple calculator'">
+                                    <img class="overlay-img" src="../img/example/ex-github-calculator.jpg"
+                                    alt="Desktop-Bildschirmfoto des Projektes 'simple calculator'">
                                     <div class="overlay-textcontainer">
-                                        <div class="overlay-text">GitHub: simple calculator, based on Frontendmasters' "Intro to Web Development"</div>
+                                        <div class="overlay-text">GitHub: einfacher Taschenrechner, basierend auf Frontendmasters' "Intro to Web Development"</div>
                                     </div>
                                 </a>
                             </div>
                             <div class="overlay-container">
                                 <a href="https://codepen.io/ellypirelly/pen/qBaKWvX" target="_blank"
                                 rel="noopener noreferrer">
-                                    <img class="overlay-img" src="./src/img/example/ex-codepen-cssgrid.jpg"
-                                    alt="desktop screenshot of a simple CSS Grid example">
+                                    <img class="overlay-img" src="../img/example/ex-codepen-cssgrid.jpg"
+                                    alt="Desktop-Bildschirmfoto eines CSS-Grid-Beispiels">
                                     <div class="overlay-textcontainer">
-                                        <div class="overlay-text">CodePen: simple CSS Grid example</div>
+                                        <div class="overlay-text">CodePen: einfaches Beispiel eines CSS Grids</div>
                                     </div>
                                 </a>
                             </div>
                             <div class="overlay-container">
                                 <a href="https://github.com/EllyPirelly/project-simple-API-call" target="_blank"
                                 rel="noopener noreferrer">
-                                    <img class="overlay-img" src="./src/img/example/ex-github-clicks-for-dogs.jpg"
-                                    alt="desktop screenshot of the project 'clicks for dogs'">
+                                    <img class="overlay-img" src="../img/example/ex-github-clicks-for-dogs.jpg"
+                                    alt="Desktop-Bildschirmfoto des Projektes 'Clicks for Dogs'">
                                     <div class="overlay-textcontainer">
-                                        <div class="overlay-text">GitHub: API call "Clicks for Dogs", based on Frontendmasters' "Intro to Web Development"</div>
+                                        <div class="overlay-text">GitHub: API call "Clicks for Dogs", basierend auf Frontendmasters' "Intro to Web Development"</div>
                                     </div>
                                 </a>
                             </div>
                             <div class="overlay-container">
                                 <a href="https://github.com/EllyPirelly/project-portfolio-gatsby-tailwindCSS" target="_blank"
                                 rel="noopener noreferrer">
-                                    <img class="overlay-img" src="./src/img/example/ex-github-gatsby-tailwind.jpg"
-                                    alt="desktop screenshot of the GatsbyJS/TailwindCSS website, 'About me' page">
+                                    <img class="overlay-img" src="../img/example/ex-github-gatsby-tailwind.jpg"
+                                    alt="Desktop-Bildschirmfoto der 'About me'-Seite des GatsbyJS-TailwindCSS-Projektes">
                                     <div class="overlay-textcontainer">
-                                        <div class="overlay-text">GitHub: first steps with GatsbyJS and Tailwind CSS</div>
+                                        <div class="overlay-text">GitHub: Erste Versuche mit GatsbyJS und Tailwind CSS</div>
                                     </div>
                                 </a>
                             </div>
                             <div class="overlay-container">
                                 <a href="https://github.com/EllyPirelly/project-custom-info-banner" target="_blank"
                                 rel="noopener noreferrer">
-                                    <img class="overlay-img" src="./src/img/example/ex-github-info-banner.jpg"
-                                    alt="desktop screenshot of the 'customer information banner', in 5 color schemes">
+                                    <img class="overlay-img" src="../img/example/ex-github-info-banner.jpg"
+                                    alt="Desktop-Bildschirmfoto des Projektes 'Customer Information Banner' in fünf Farbschemas">
                                     <div class="overlay-textcontainer">
-                                        <div class="overlay-text">GitHub: customer information banner in 5 color schemes</div>
+                                        <div class="overlay-text">GitHub: Customer Information Banner in fünf Farbschemas (HTML, CSS)</div>
                                     </div>
                                 </a>
                             </div>
@@ -217,15 +207,17 @@
             <section class="section-wrapper blog">
                 <div class="blog-container">
                     <h1 class="main-headline blog">Blog</h1>
-                    <img src="./src/img/blog/740_480_blog-laptop.jpg"
+                    <img src="../img/blog/740_480_blog-laptop.jpg"
                         alt="open mac book standing on a desktop"
                         class="blog-img">
-                    <p class="wobble-text blog">I’m planning to little by little put all of my handwritten findings about „the galaxy life, the universe and everything“ into my blog section, along with general blog posts.</p>
+                    <p class="wobble-text blog">Ich habe vor nach und nach meine ganzen handschriftlichen Notizen zu digitalisieren und in meinem Blog-Bereich festzuhalten, zusätzlich zu generellen Blog-Posts. Die Blog-Posts sind in Englisch.</p>
                     <a href="/blog/blog.html" class="wobble-link blog" aria-label="click to get to blog post"
                         rel="noopener noreferrer">
-                        <p class="wobble-text blog">Click here for blog posts overview</p>
-                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/>
+                        <p class="wobble-text blog">Hier geht's zur Blog-Posts-Übersichtsseite</p>
+                        <svg class="arrow-right-svg blog" fill="currentColor" focusable="false"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M291.838 35.838L263.57 64.106l171.904 171.905H0v39.978h435.474L263.57 447.894l28.268 28.268L512 256z" />
                         </svg>
                     </a>
                 </div>
@@ -233,20 +225,24 @@
             <!-- publications -->
             <section class="section-wrapper publication">
                 <div class="publication-container">
-                    <h1 class="main-headline publication">Publications</h1>
+                    <h1 class="main-headline publication">Artikel</h1>
                     <a href="https://elly-pirelly.medium.com/how-i-improved-my-favicon-game-b848756e780c" class="wobble-link" aria-label="click to get to publication" target="_blank"
                         rel="noopener noreferrer">
                         <p class="wobble-text publication">How I improved my favicon game</p>
-                        <svg class="arrow-right-svg" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/>
+                        <svg class="arrow-right-svg" fill="currentColor" focusable="false"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M291.838 35.838L263.57 64.106l171.904 171.905H0v39.978h435.474L263.57 447.894l28.268 28.268L512 256z" />
                         </svg>
                     </a>
                     <hr class="hr-line">
                     <a href="https://elly-pirelly.medium.com/" class="wobble-link" aria-label="click to get to publication" target="_blank"
                         rel="noopener noreferrer">
-                        <p class="main-text publication">Medium: just another article</p>
-                        <svg class="arrow-right-svg" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/>
+                        <p class="main-text publication">Medium: ein möglicher Artikel zu ...</p>
+                        <svg class="arrow-right-svg" fill="currentColor" focusable="false"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M291.838 35.838L263.57 64.106l171.904 171.905H0v39.978h435.474L263.57 447.894l28.268 28.268L512 256z" />
                         </svg>
                     </a>
                 </div>
@@ -262,7 +258,7 @@
         <!-- footer -->
         <footer class="footer-wrapper">
             <div class="footer-container" id="connect">
-                <h1 class="main-headline footer">Find me elsewhere: </h1>
+                <h1 class="main-headline footer">Finde mich auch hier: </h1>
                 <div class="footer-svgs">
                     <a class="footer-link" href="https://github.com/EllyPirelly?tab=repositories" target="_blank"
                         rel="noopener noreferrer">
@@ -338,7 +334,7 @@
             </div>
         </footer>
     </div>
-    <script src="./src/js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
