@@ -15,14 +15,8 @@
 - clone the repo
 - cd into project
 - run `npm install`
-
-- To run in development mode
-- `npm run dev`
-- this will fire up the server at http://localhost:1234
-
-- To run in production mode
-- `npm run build`
-
+- to run in development mode: `npm run dev`, this will fire up the server at http://localhost:1234
+- to run in production mode: `npm run build`
 - stop the server with `control c`
 
 ### TODO / ongoing
