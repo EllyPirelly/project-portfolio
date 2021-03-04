@@ -17,10 +17,10 @@ html {
 body {
     background-color: $paleorange;
     color: $verydarkgray;
-    font-family: "Bitter", serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.45;
     position: relative;
 }
 
@@ -29,6 +29,7 @@ a {
 }
 
 a.link-style {
+    font-family: "Bitter", serif;
     text-decoration: underline $darkgray;
 
     &:hover {
@@ -49,7 +50,11 @@ a.link-style {
 /* main - general */
 .main-wrapper {
     margin-bottom: 62px;
-    padding: 0 2em;
+    /* padding: 0 2em; */
+
+    @media screen and (min-width: $breakpoint-xsmall) {
+        padding: 2em;
+    }
 
     @media screen and (min-width: $breakpoint-small) {
         padding: 3em;
@@ -74,12 +79,14 @@ a.link-style {
 }
 
 .main-headline {
+    font-family: "Bitter", serif;
     font-size: 2em;
     font-weight: 500;
     margin-bottom: 1.15em;
 }
 
 .second-headline {
+    font-family: "Bitter", serif;
     font-size: 1.5em;
     font-weight: 500;
 }
