@@ -8,7 +8,12 @@
     border: 2px solid $paleorange;
     border-radius: 50%;
     box-shadow: 0 0 0 6px $delicateblue;
-    height: 100px;
+    height: 70px;
+    z-index: 1500;
     object-fit: cover;
     width: auto;
+
+    @media screen and (min-width: $breakpoint-small) {
+        height: 100px;
+    }
 }

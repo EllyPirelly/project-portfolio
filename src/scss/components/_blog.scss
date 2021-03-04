@@ -13,7 +13,11 @@
 /* blog wrapper */
 .blg-wrapper {
     margin-top: 4.5em;
-    padding: 0 2em;
+    padding: 0 1em;
+
+    @media screen and (min-width: $breakpoint-xsmall) {
+        padding: 2em;
+    }
 
     @media screen and (min-width: $breakpoint-small) {
         padding: 3em;
@@ -103,12 +107,13 @@
 }
 
 .blg-sidenav-tag-link {
+    margin-bottom: 8px;
+    margin-right: 6px;
     text-decoration: none;
 }
 
 .blg-sidenav-tag {
     padding: 4px;
-    margin-right: 4px;
     font-size: 12px;
 }
 

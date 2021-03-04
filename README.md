@@ -1,4 +1,4 @@
-# WIP - Portfolio site
+# Portfolio site
 
 ### What is this about?
 
@@ -15,14 +15,17 @@
 - clone the repo
 - cd into project
 - run `npm install`
-- when running the project for the first time, run `npm run build` to have it build the first time
-- this should fire up the server at http://localhost:1234
-- after that you can run the project in running `npm start`
+
+- To run in development mode
+- `npm run dev`
+- this will fire up the server at http://localhost:1234
+
+- To run in production mode
+- `npm run build`
+
 - stop the server with `control c`
 
 ### TODO / ongoing
 
-- build blog page
-- introduce click for more examples button (still todo: better styling)
-- clean-up SCSS (modular)
-- host on netlify
+- implement filtering for tagged articles
+- clean-up SCSS (modular, variables, mixins)
