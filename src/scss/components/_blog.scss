@@ -12,15 +12,15 @@
 
 /* blog wrapper */
 .blg-wrapper {
-    margin-top: 4.5em;
+    margin-top: 4em;
     padding: 0 1em;
 
     @media screen and (min-width: $breakpoint-xsmall) {
-        padding: 2em;
+        padding: 0 2em;
     }
 
     @media screen and (min-width: $breakpoint-small) {
-        padding: 3em;
+        padding: 0 3em;
     }
 
     @media screen and (min-width: $breakpoint-medium) {
@@ -45,7 +45,7 @@
     width: 100%;
 
       @media screen and (min-width: $breakpoint-medium) {
-        --offset: 9em;
+        --offset: 10em;
         align-self: start;
         flex-basis: 300px;
         flex-grow: 1;
@@ -159,7 +159,7 @@
         flex-basis: 0;
         flex-grow: 999;
         margin-left: 2em;
-        margin-top: 2em;
+        margin-top: 4em;
         min-width: 40%;
     }
 }
@@ -190,12 +190,20 @@
 }
 
 .blg-hero-img {
-    height: 300px;
+    height: 200px;
     object-fit: cover;
     width: 100%;
 
+    @media screen and (min-width: $breakpoint-small) {
+        height: 300px;
+    }
+
     &.full-article {
         border: 1px solid $verydarkgray;
+
+        @media screen and (min-width: $breakpoint-small) {
+            height: 300px;
+        }
     }
 }
 
