@@ -1,0 +1,44 @@
+
+.wea-container {
+    background-color: #a6b6f0;
+    padding: 1em 1.5em;
+    width: 100%;
+}
+
+.wea-title {
+    color: #293251;
+    text-align: center;
+}
+
+.wea-wrapper {
+    background-color: #F4F9FF;
+    padding: 16px;
+}
+
+.wea-error-note {
+    background-color: #f8d7da;
+    display: none;
+
+    & p {
+        color: #721c24;
+        text-align: center;
+    }
+}
+
+.wea-location p {
+    text-align: center;
+}
+
+.wea-icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.wea-temp-val p {
+    cursor: pointer;
+    text-align: center;
+}
+
+.wea-desc p {
+    text-align: center;
+}
