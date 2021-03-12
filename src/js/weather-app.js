@@ -89,7 +89,10 @@ const WeatherApp = (function () {
   const init = () => {
     // check if browser supports geolocation
     if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(setPosition, showError)
+      /* navigator.geolocation.getCurrentPosition(setPosition, showError) */
+      navigator.geolocation.getCurrentPosition((position) =>
+        console.log(position)
+      )
     } else {
       notificationElement.style.display = 'block'
       notificationElement.innerHTML =
