@@ -35,7 +35,7 @@ const WeatherApp = (function () {
   }
 
   // API weather
-  const getWeather = (latitude = '52.5244', longitude = '13.4105') => {
+  const getWeather = (latitude, longitude) => {
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`
 
     fetch(api)
@@ -58,13 +58,15 @@ const WeatherApp = (function () {
 
   // user position
   const setPosition = (position) => {
+    console.log('position')
+    console.log(position)
     const latitude = position.coords.latitude
     const longitude = position.coords.longitude
 
     getWeather(latitude, longitude)
   }
 
-  // C to F conversion
+  // celsius to fahrenheit conversion
   const celsiusToFahrenheit = (temperature) => {
     return (temperature * 9) / 5 + 32
   }
@@ -93,8 +95,6 @@ const WeatherApp = (function () {
       notificationElement.innerHTML =
         "<p>Browser doesn't support geolocation</p>"
     }
-
-    getWeather()
 
     // temperature change on click
     tempElement.addEventListener('click', toggleTemperature)
