@@ -36,7 +36,7 @@ const WeatherApp = (function () {
 
   // API weather
   const getWeather = (latitude, longitude) => {
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`
 
     fetch(api)
       .then(function (response) {
@@ -89,10 +89,7 @@ const WeatherApp = (function () {
   const init = () => {
     // check if browser supports geolocation
     if ('geolocation' in navigator) {
-      /* navigator.geolocation.getCurrentPosition(setPosition, showError) */
-      navigator.geolocation.getCurrentPosition((position) =>
-        console.log(position)
-      )
+      navigator.geolocation.getCurrentPosition(setPosition, showError)
     } else {
       notificationElement.style.display = 'block'
       notificationElement.innerHTML =
