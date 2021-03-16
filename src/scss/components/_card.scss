@@ -18,6 +18,7 @@
 
 .home-container {
     background-color: $pastelgreen;
+    padding-top: 3em;
 }
 
 .home-img {
@@ -48,6 +49,14 @@
     }
 }
 
+/* weather */
+#weather {
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-column: 2 / 3;
+        grid-row: 4 / 6;
+    }
+}
+
 /* about */
 #about-me {
     @media screen and (min-width: $breakpoint-medium) {
@@ -59,7 +68,7 @@
 .section-wrapper.about {
     @media screen and (min-width: $breakpoint-medium) {
         grid-column: 2 / 3;
-        grid-row: 2 / 3;
+        grid-row: 1 / 4;
     }
 }
 
@@ -159,15 +168,14 @@
 #code {
     @media screen and (min-width: $breakpoint-medium) {
         grid-column: 1 / 2;
-        grid-row: 3 / 4;
+        grid-row: 4 / 5;
     }
 }
 
 .section-wrapper.code {
     @media screen and (min-width: $breakpoint-medium) {
         grid-column: 1 / 2;
-        grid-row: 4 / 7;
-        margin-top: 0;
+        grid-row: 3 / 10;
     }
 }
 
@@ -260,14 +268,14 @@
 #writing {
     @media screen and (min-width: $breakpoint-medium) {
         grid-column: 2 / 3;
-        grid-row: 4 / 5;
+        grid-row: 5 / 6;
     }
 }
 
 .section-wrapper.blog {
     @media screen and (min-width: $breakpoint-medium) {
         grid-column: 2 / 3;
-        grid-row: 4 / 5;
+        grid-row: 6 / 8;
     }
 }
 
@@ -293,7 +301,7 @@
 .section-wrapper.publication {
     @media screen and (min-width: $breakpoint-medium) {
         grid-column: 2 / 3;
-        grid-row: 5 / 6;
+        grid-row: 8 / 10;
     }
 }
 
