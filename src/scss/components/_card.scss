@@ -1,5 +1,6 @@
 .home-container,
 .about-container,
+.wea-container,
 .code-container,
 .blog-container,
 .publication-container,
@@ -7,12 +8,63 @@
     padding: 1em 1.5em;
 }
 
-/* home */
-.section-wrapper.home {
+#home,
+#code,
+.section-wrapper.home,
+.section-wrapper.code {
     @media screen and (min-width: $breakpoint-medium) {
         grid-column: 1 / 2;
-        grid-row: 1 / 3;
-        margin-top: 10em;
+    }
+}
+
+#about-me,
+.section-wrapper.about,
+#weather,
+.section-wrapper.weather,
+#blog,
+.section-wrapper.blog,
+#publication,
+.section-wrapper.publication {
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-column: 2 / 3;
+    }
+}
+
+#home,
+#code,
+#about-me,
+#weather,
+#blog,
+#publication {
+    @media screen and (min-width: $breakpoint-medium) {
+        height: 68px;
+    }
+}
+
+/* home */
+#home {
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-row: 2 / 3;
+    }
+}
+
+.section-wrapper.home,
+.section-wrapper.about,
+.section-wrapper.weather,
+.section-wrapper.code,
+.section-wrapper.blog,
+.section-wrapper.publication {
+    @media screen and (min-width: $breakpoint-xsmall) {
+        margin-top: 68px;
+    }
+    @media screen and (min-width: $breakpoint-medium) {
+        margin-top: 0;
+    }
+}
+
+.section-wrapper.home {
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-row: 3 / 4;
     }
 }
 
@@ -49,26 +101,16 @@
     }
 }
 
-/* weather */
-#weather {
-    @media screen and (min-width: $breakpoint-medium) {
-        grid-column: 2 / 3;
-        grid-row: 4 / 6;
-    }
-}
-
 /* about */
 #about-me {
     @media screen and (min-width: $breakpoint-medium) {
-        grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
 }
 
 .section-wrapper.about {
     @media screen and (min-width: $breakpoint-medium) {
-        grid-column: 2 / 3;
-        grid-row: 1 / 4;
+        grid-row: 2 / 6;
     }
 }
 
@@ -164,18 +206,33 @@
     }
 }
 
+/* weather */
+#weather {
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-row: 6 / 7;
+    }
+}
+
+.section-wrapper.weather {
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-row: 7 / 8;
+    }
+}
+
+.wea-container {
+    background: linear-gradient(155deg, rgba(113, 152, 187, 1) 0%, rgba(194, 218, 232, 1) 60%);
+}
+
 /* code */
 #code {
     @media screen and (min-width: $breakpoint-medium) {
-        grid-column: 1 / 2;
         grid-row: 4 / 5;
     }
 }
 
 .section-wrapper.code {
     @media screen and (min-width: $breakpoint-medium) {
-        grid-column: 1 / 2;
-        grid-row: 3 / 10;
+        grid-row: 5 / 13;
     }
 }
 
@@ -265,17 +322,15 @@
 
 
 /* blog */
-#writing {
+#blog {
     @media screen and (min-width: $breakpoint-medium) {
-        grid-column: 2 / 3;
-        grid-row: 5 / 6;
+        grid-row: 8 / 9;
     }
 }
 
 .section-wrapper.blog {
     @media screen and (min-width: $breakpoint-medium) {
-        grid-column: 2 / 3;
-        grid-row: 6 / 8;
+        grid-row: 9 / 10;
     }
 }
 
@@ -298,10 +353,15 @@
 }
 
 /* publication */
+#publication {
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-row: 10 / 11;
+    }
+}
+
 .section-wrapper.publication {
     @media screen and (min-width: $breakpoint-medium) {
-        grid-column: 2 / 3;
-        grid-row: 8 / 10;
+        grid-row: 11 / 36;
     }
 }
 
