@@ -40,7 +40,8 @@
             </nav>
         </header>
         <main class="main-wrapper">
-            <section id="home" class="section-wrapper home">
+            <span id="home"></span>
+            <section class="section-wrapper home">
                 <div class="home-container">
                     <h1 class="main-headline home">Hi! I'm Elle</h1>
                     <img src="./img/740-IMG_1625-landscape-sw.jpg"
@@ -77,19 +78,39 @@
             <!-- weather -->
             <section id="weather" class="section-wrapper weather">
                 <div class="wea-container">
-                    <div class="wea-title">Current weather in:</div>
-                    <div class="wea-wrapper">
+                    <div class="wea-title">Current weather in Berlin:</div>
+                    <div class="wea-info-wrapper">
+                        <div class="wea-icon-desc-container">
                         <div class="wea-location">
-                            <p>-</p>
+                            <p>test test test</p>
                         </div>
                         <div class="wea-icon">
                             <img src="./img/icons/unknown.png" alt="">
                         </div>
-                        <div class="wea-temp-val">
-                            <p>- <span>°C</span></p>
+                        <div class="wea-temp-main">
+                            <p>x <span>- °C</span></p>
+                            <span class="wea-temp-change">Click to change to °F / °C<span>
                         </div>
                         <div class="wea-desc">
-                            <p>-</p>
+                            <p><span>-</span><p>
+                        </div>
+                    </div>
+                    <div class="wea-wind-sun-container">
+                        <div class="wea-wind">
+                            <span class="wea-wind-speed">
+                                <p>Wind: <span>-</span> meter/sec</p>
+                            </span>
+                            <span class="wea-wind-dir">
+                                <p>Wind direction: <span>-</span> degrees (meteorological)</p>
+                            </span>
+                        </div>
+                        <div class="wea-sun">
+                            <span class="wea-sunrise">
+                                <p>Sunrise: <span>-</span></p>
+                            </span>
+                            <span class="wea-sunset">
+                                <p>Sunset: <span>-</span></p>
+                            </span>
                         </div>
                     </div>
                 </div>

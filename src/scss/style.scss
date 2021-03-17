@@ -96,7 +96,9 @@ a.link-style {
 }
 
 .section-wrapper {
-    margin-top: 4em;
+    @media screen and (min-width: $breakpoint-xsmall) {
+        margin-top: 4em;
+    }
 }
 
 .arrow-right-svg {
