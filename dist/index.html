@@ -31,7 +31,7 @@
             <nav class="navbar" data-element="navbar" role="navigation">
                 <a href="#about-me" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link="" class="nav-item">About Me</a>
                 <a href="#code" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link="" class="nav-item">Code</a>
-                <a href="#writing" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link="" class="nav-item">Writing</a>
+                <a href="#blog" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link="" class="nav-item">Writing</a>
                 <a href="#connect" data-toggle="nav-toggle" data-target="[data-element=navbar]" data-link="" class="nav-item">Connect</a>
                 <a href="/de/index.html" data-toggle="nav-toggle" data-target="[data-element=navbar]" class="nav-item">DE</a>
             </nav>
@@ -70,9 +70,10 @@
                 </div>
             </section>
             <!-- weather -->
-            <section id="weather" class="section-wrapper weather">
+            <span id="weather"></span>
+            <section class="section-wrapper weather">
                 <div class="wea-container">
-                    <div class="wea-title">Current weather in Berlin:</div>
+                    <div class="second-headline">Current weather in Berlin:</div>
                     <div class="wea-info-wrapper">
                         <div class="wea-icon-desc-container">
                         <div class="wea-location">
@@ -224,7 +225,7 @@
                 </main>
             </section>
             <!-- blog -->
-            <span id="writing"></span>
+            <span id="blog"></span>
             <section class="section-wrapper blog">
                 <div class="blog-container">
                     <h1 class="main-headline blog">Blog</h1>
@@ -238,19 +239,20 @@
                     </a>
                 </div>
             </section>
-            <!-- publications -->
+            <!-- publication -->
+            <span id="publication"></span>
             <section class="section-wrapper publication">
                 <div class="publication-container">
                     <h1 class="main-headline publication">Publications</h1>
                     <a href="https://elly-pirelly.medium.com/how-i-improved-my-favicon-game-b848756e780c" class="wobble-link" aria-label="click to get to publication" target="_blank" rel="noopener noreferrer">
-                        <p class="wobble-text publication">How I improved my favicon game</p>
+                        <p class="wobble-text publication">Medium: How I improved my favicon game</p>
                         <svg class="arrow-right-svg" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"></path>
                         </svg>
                     </a>
                     <hr class="hr-line">
-                    <a href="https://elly-pirelly.medium.com/" class="wobble-link" aria-label="click to get to publication" target="_blank" rel="noopener noreferrer">
-                        <p class="main-text publication">Medium: just another article</p>
+                    <a href="https://elly-pirelly.medium.com/create-the-perfect-toggle-switch-with-pure-html-css-no-javascript-necessary-7889adf04b69" class="wobble-link" aria-label="click to get to publication" target="_blank" rel="noopener noreferrer">
+                        <p class="main-text publication">Medium: Create the perfect toggle switch</p>
                         <svg class="arrow-right-svg" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"></path>
                         </svg>
@@ -268,7 +270,7 @@
         <!-- footer -->
         <footer class="footer-wrapper">
             <div class="footer-container" id="connect">
-                <h1 class="main-headline footer">Find me elsewhere: </h1>
+                <h1 class="main-headline footer">Find me: </h1>
                 <div class="footer-svgs">
                     <a class="footer-link" href="https://github.com/EllyPirelly?tab=repositories" target="_blank" rel="noopener noreferrer">
                         <svg class="github-svg" aria-labelledby="githubLogo, githubDesc" fill="currentColor" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
