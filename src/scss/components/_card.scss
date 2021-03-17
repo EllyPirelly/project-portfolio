@@ -5,7 +5,7 @@
 .blog-container,
 .publication-container,
 .footer-container {
-    padding: 1em 1.5em;
+    padding: 1em 1.5em ;
 }
 
 #home,
@@ -30,21 +30,32 @@
     }
 }
 
-#home,
 #code,
 #about-me,
 #weather,
 #blog,
 #publication {
-    @media screen and (min-width: $breakpoint-medium) {
-        height: 68px;
+    display: block;
+    height: 98px;
+
+    @media screen and (min-width: $breakpoint-small) {
+        height: 132px;
     }
 }
 
-/* home */
 #home {
+    display: block;
+    height: 32px;
+
+    @media screen and (min-width: $breakpoint-small) {
+        height: 64px;
+    }
+}
+
+#home,
+#about-me {
     @media screen and (min-width: $breakpoint-medium) {
-        grid-row: 2 / 3;
+        height: 84px;
     }
 }
 
@@ -54,11 +65,15 @@
 .section-wrapper.code,
 .section-wrapper.blog,
 .section-wrapper.publication {
-    @media screen and (min-width: $breakpoint-xsmall) {
-        margin-top: 68px;
-    }
     @media screen and (min-width: $breakpoint-medium) {
         margin-top: 0;
+    }
+}
+
+/* home */
+#home {
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-row: 2 / 3;
     }
 }
 
@@ -70,7 +85,6 @@
 
 .home-container {
     background-color: $pastelgreen;
-    padding-top: 3em;
 }
 
 .home-img {
