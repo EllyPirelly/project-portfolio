@@ -4,15 +4,23 @@ const WeatherApp = (function () {
   // API key
   const key = 'a662bc31b2ba6bfbd3bf6288c5394603'
 
-  // select elements to manipulate
-  const weatherLocation = document.querySelector('.wea-location p')
-  const weatherIcon = document.querySelector('.wea-icon')
-  const weatherTempMain = document.querySelector('.wea-temp-main p')
-  const weatherDesc = document.querySelector('.wea-desc span')
-  const weatherWindspeed = document.querySelector('.wea-wind-speed span')
-  const weatherWinddir = document.querySelector('.wea-wind-dir span')
-  const weatherSunrise = document.querySelector('.wea-sunrise span')
-  const weatherSunset = document.querySelector('.wea-sunset span')
+  // select data-attributes to manipulate elements
+  const weatherLocation = document.querySelector(
+    '[data-location="wea-location"]'
+  )
+  const weatherIcon = document.querySelector('[data-icon="wea-icon"]')
+  const weatherTempMain = document.querySelector(
+    '[data-temp-main="wea-temp-main"]'
+  )
+  const weatherDesc = document.querySelector('[data-desc="wea-desc"]')
+  const weatherWindspeed = document.querySelector(
+    '[data-wind-speed="wea-wind-speed"]'
+  )
+  const weatherWinddir = document.querySelector(
+    '[data-wind-dir="wea-wind-dir"]'
+  )
+  const weatherSunrise = document.querySelector('[data-sunrise="wea-sunrise"]')
+  const weatherSunset = document.querySelector('[data-sunset="wea-sunset"]')
 
   const weather = {}
 
@@ -22,7 +30,7 @@ const WeatherApp = (function () {
 
   // display weather
   const displayWeather = () => {
-    weatherLocation.innerHTML = `${weather.city}, ${weather.country}`
+    weatherLocation.innerHTML = `${weather.city}`
     weatherIcon.innerHTML = `<img src="${icons[weather.iconId]}" />`
     weatherTempMain.innerHTML = `${weather.temperature.value}°<span>C</span>`
     weatherDesc.innerHTML = weather.description
@@ -52,7 +60,7 @@ const WeatherApp = (function () {
         weather.sunrise = data.sys.sunrise
         weather.sunset = data.sys.sunset
         /*weather.sunrise = new Date((data.sys.sunrise + data.timezone) * 1000)
-        weather.sunset = new Date((data.sys.sunset + data.timezone) * 1000) */
+            weather.sunset = new Date((data.sys.sunset + data.timezone) * 1000) */
 
         displayWeather()
       })
