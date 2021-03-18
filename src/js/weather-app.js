@@ -22,6 +22,7 @@ const WeatherApp = (function () {
   const weatherSunrise = document.querySelector('[data-sunrise="wea-sunrise"]')
   const weatherSunset = document.querySelector('[data-sunset="wea-sunset"]')
 
+  // empty objec for (fetched) data
   const weather = {}
 
   weather.temperature = {
@@ -57,10 +58,25 @@ const WeatherApp = (function () {
         weather.description = data.weather[0].description
         weather.windspeed = data.wind.speed
         weather.winddir = data.wind.deg
-        weather.sunrise = data.sys.sunrise
+
+        let options = { hour: 'numeric', minute: 'numeric', second: 'numeric' }
+
+        /* weather.sunrise = data.sys.sunrise
+        console.log('api data is a number ', weather.sunrise)
         weather.sunset = data.sys.sunset
-        /*weather.sunrise = new Date((data.sys.sunrise + data.timezone) * 1000)
-            weather.sunset = new Date((data.sys.sunset + data.timezone) * 1000) */
+        console.log('api data is a number ', weather.sunset) */
+
+        weather.sunrise = new Date(data.sys.sunrise).toLocaleDateString(
+          'de-DE',
+          options
+        )
+        console.log('converted', weather.sunrise)
+
+        weather.sunset = new Date(data.sys.sunset).toLocaleString(
+          'de-DE',
+          options
+        )
+        console.log('converted', weather.sunset)
 
         displayWeather()
       })
@@ -69,18 +85,22 @@ const WeatherApp = (function () {
       })
   }
 
+  // m/sec to km/h
+  const mSecToKmh = (mSec) => {
+    let kmh = mSec * 3.6
+  }
+
   // degree to compass
-  const degreeToCompass = (num) => {
-    var val = Math.floor(num / 22.5 + 0.5)
-    var arr = [
+  const degreeToCompass = (deg) => {
+    let compass = [
       'N',
-      'NNE',
-      'NE',
-      'ENE',
-      'E',
-      'ESE',
-      'SE',
-      'SSE',
+      'NNO',
+      'NO',
+      'ONO',
+      'O',
+      'OSO',
+      'SO',
+      'SSO',
       'S',
       'SSW',
       'SW',
@@ -90,7 +110,10 @@ const WeatherApp = (function () {
       'NW',
       'NNW',
     ]
-    return arr[val % 16]
+    let index = Math.round((deg % 360) / 22.5)
+    return compass[index]
+    /* var index = Math.floor(deg / 22.5 + 0.5)
+    return compass[index % 16] */
   }
 
   // celsius to fahrenheit conversion
