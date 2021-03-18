@@ -22,7 +22,6 @@ const WeatherApp = (function () {
   const weatherSunrise = document.querySelector('[data-sunrise="wea-sunrise"]')
   const weatherSunset = document.querySelector('[data-sunset="wea-sunset"]')
 
-  // API data object to fill
   const weather = {}
 
   weather.temperature = {
@@ -31,7 +30,7 @@ const WeatherApp = (function () {
 
   // display weather
   const displayWeather = () => {
-    weatherLocation.innerHTML = `${weather.city}, ${weather.country}`
+    weatherLocation.innerHTML = `${weather.city}`
     weatherIcon.innerHTML = `<img src="${icons[weather.iconId]}" />`
     weatherTempMain.innerHTML = `${weather.temperature.value}°<span>C</span>`
     weatherDesc.innerHTML = weather.description
