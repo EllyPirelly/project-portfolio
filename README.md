@@ -2,11 +2,14 @@
 
 ### What is this about?
 
-- a first draft of my portfolio site where I try out things
-- at time of writing, nothing's final, not even content
+- first draft of my portfolio site where I try out things
+- first draft is NOT modular on purpose, as I've developped content and design along the way, so extent of site was unclear when starting
+- next step (when finished) will be refactoring this portfolio site to a modular approach
 
 ### Preconditions
 
+- figure out design yourself
+- figure out possible content
 - build this with HTML, SCSS, (plain) JavaScript
 - try out [parcel.js](https://parceljs.org/getting_started.html), as a less work intense bundler than Webpack
 
@@ -21,5 +24,6 @@
 
 ### TODO / ongoing
 
-- implement filtering for tagged articles
-- clean-up SCSS (modular, variables, mixins)
+- API fetch (weather app)
+- minification of files
+- implementation of filtering for tagged articles
