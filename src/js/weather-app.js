@@ -5,16 +5,15 @@ const WeatherApp = (function () {
   const key = 'a662bc31b2ba6bfbd3bf6288c5394603'
 
   // select elements to manipulate
-  const locationElement = document.querySelector('.wea-location p')
-  const iconElement = document.querySelector('.wea-icon')
-  const tempMainElement = document.querySelector('.wea-temp-main p')
+  const weatherLocation = document.querySelector('.wea-location p')
+  const weatherIcon = document.querySelector('.wea-icon')
+  const weatherTempMain = document.querySelector('.wea-temp-main p')
+  const weatherDesc = document.querySelector('.wea-desc span')
   const weatherWindspeed = document.querySelector('.wea-wind-speed span')
   const weatherWinddir = document.querySelector('.wea-wind-dir span')
-  const descElement = document.querySelector('.wea-desc span')
   const weatherSunrise = document.querySelector('.wea-sunrise span')
   const weatherSunset = document.querySelector('.wea-sunset span')
 
-  // API data object to fill
   const weather = {}
 
   weather.temperature = {
@@ -23,12 +22,12 @@ const WeatherApp = (function () {
 
   // display weather
   const displayWeather = () => {
-    locationElement.innerHTML = `${weather.city}, ${weather.country}`
-    iconElement.innerHTML = `<img src="${icons[weather.iconId]}" />`
-    tempMainElement.innerHTML = `${weather.temperature.value}°<span>C</span>`
+    weatherLocation.innerHTML = `${weather.city}, ${weather.country}`
+    weatherIcon.innerHTML = `<img src="${icons[weather.iconId]}" />`
+    weatherTempMain.innerHTML = `${weather.temperature.value}°<span>C</span>`
+    weatherDesc.innerHTML = weather.description
     weatherWindspeed.innerHTML = weather.windspeed
     weatherWinddir.innerHTML = weather.winddir
-    descElement.innerHTML = weather.description
     weatherSunrise.innerHTML = weather.sunrise
     weatherSunset.innerHTML = weather.sunset
   }
@@ -47,10 +46,9 @@ const WeatherApp = (function () {
         weather.country = data.sys.country
         weather.iconId = data.weather[0].icon
         weather.temperature.value = Math.floor(data.main.temp)
-        weather.pressure = data.main.pressure
+        weather.description = data.weather[0].description
         weather.windspeed = data.wind.speed
         weather.winddir = data.wind.deg
-        weather.description = data.weather[0].description
         weather.sunrise = data.sys.sunrise
         weather.sunset = data.sys.sunset
         /*weather.sunrise = new Date((data.sys.sunrise + data.timezone) * 1000)
@@ -99,10 +97,10 @@ const WeatherApp = (function () {
     if (weather.temperature.unit == 'celsius') {
       let fahrenheit = celsiusToFahrenheit(weather.temperature.value)
       fahrenheit = Math.floor(fahrenheit)
-      tempMainElement.innerHTML = `${fahrenheit}°<span>F</span>`
+      weatherTempMain.innerHTML = `${fahrenheit}°<span>F</span>`
       weather.temperature.unit = 'fahrenheit'
     } else {
-      tempMainElement.innerHTML = `${weather.temperature.value}°<span>C</span>`
+      weatherTempMain.innerHTML = `${weather.temperature.value}°<span>C</span>`
       weather.temperature.unit = 'celsius'
     }
   }
@@ -111,7 +109,7 @@ const WeatherApp = (function () {
     getWeather()
 
     // temperature change on click
-    tempMainElement.addEventListener('click', toggleTemperature)
+    weatherTempMain.addEventListener('click', toggleTemperature)
   }
 
   return {
