@@ -108,3 +108,20 @@
     }
 }
 
+.wea-sunrise,
+.wea-sunset {
+    align-items: flex-end;
+    display: flex;
+}
+
+[data-sunrise="wea-sunrise"],
+[data-sunset="wea-sunset"] {
+    margin-right: 6px;
+}
+
+.wea-sunrise-svg,
+.wea-sunset-svg {
+    height: 35px;
+    margin-right: 8px;
+    width: auto;
+}
