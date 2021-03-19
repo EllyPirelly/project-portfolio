@@ -1,4 +1,4 @@
-import icons from '../img/icons/*.png'
+import icons from '../img/weather-icons/*.png'
 
 const WeatherApp = (function () {
   // API key
