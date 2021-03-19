@@ -8,9 +8,10 @@
 
 ### Preconditions
 
-- figure out design yourself
+- figure out design myself
 - figure out possible content
-- build this with HTML, SCSS, (plain) JavaScript
+- take care of images, svgs, et all myself
+- build this with HTML, SCSS, (vanilla) JavaScript - NONMODULAR
 - try out [parcel.js](https://parceljs.org/getting_started.html), as a less work intense bundler than Webpack
 
 ### How to run this?
@@ -19,11 +20,9 @@
 - cd into project
 - run `npm install`
 - to run in development mode: `npm run dev`, this will fire up the server at http://localhost:1234
-- to run in production mode: `npm run build`
+- to run in production mode: `npm run build`, this will also minify your files into the `dist` folder
 - stop the server with `control c`
 
 ### TODO / ongoing
 
-- API fetch (weather app)
-- minification of files
-- implementation of filtering for tagged articles
+- implementation of filtering for tagged blog posts
