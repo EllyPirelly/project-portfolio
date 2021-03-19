@@ -41,58 +41,14 @@ const WeatherApp = (function () {
     weatherSunset.innerHTML = weather.sunset
   }
 
-  // API weather
-  const getWeather = () => {
-    let api = `https://api.openweathermap.org/data/2.5/weather?lat=52.5145&lon=13.3501&units=metric&appid=${key}`
-
-    fetch(api)
-      .then(function (response) {
-        let data = response.json()
-        return data
-      })
-      .then(function (data) {
-        weather.city = data.name
-        weather.country = data.sys.country
-        weather.iconId = data.weather[0].icon
-        weather.temperature.value = Math.floor(data.main.temp)
-        weather.description = data.weather[0].description
-        weather.windspeed = data.wind.speed
-        weather.winddir = data.wind.deg
-
-        let options = { hour: 'numeric', minute: 'numeric', second: 'numeric' }
-
-        /* weather.sunrise = data.sys.sunrise
-        console.log('api data is a number ', weather.sunrise)
-        weather.sunset = data.sys.sunset
-        console.log('api data is a number ', weather.sunset) */
-
-        weather.sunrise = new Date(data.sys.sunrise).toLocaleDateString(
-          'de-DE',
-          options
-        )
-        console.log('converted', weather.sunrise)
-
-        weather.sunset = new Date(data.sys.sunset).toLocaleString(
-          'de-DE',
-          options
-        )
-        console.log('converted', weather.sunset)
-
-        displayWeather()
-      })
-      .catch((error) => {
-        throw error
-      })
-  }
-
   // m/sec to km/h
   const mSecToKmh = (mSec) => {
-    let kmh = mSec * 3.6
+    return mSec * 3.6
   }
 
   // degree to compass
   const degreeToCompass = (deg) => {
-    let compass = [
+    const compass = [
       'N',
       'NNO',
       'NO',
@@ -110,10 +66,50 @@ const WeatherApp = (function () {
       'NW',
       'NNW',
     ]
-    let index = Math.round((deg % 360) / 22.5)
+    const index = Math.round((deg % 360) / 22.5)
     return compass[index]
-    /* var index = Math.floor(deg / 22.5 + 0.5)
-    return compass[index % 16] */
+  }
+
+  // API weather
+  const getWeather = () => {
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=52.5145&lon=13.3501&units=metric&appid=${key}`
+
+    fetch(api)
+      .then(function (response) {
+        const data = response.json()
+        return data
+      })
+      .then(function (data) {
+        weather.city = data.name
+        weather.country = data.sys.country
+        weather.iconId = data.weather[0].icon
+        weather.temperature.value = Math.floor(data.main.temp)
+        weather.description = data.weather[0].description
+        weather.windspeed = mSecToKmh(Math.round(data.wind.speed))
+        weather.winddir = degreeToCompass(data.wind.deg)
+
+        const options = {
+          hour: 'numeric',
+          minute: 'numeric',
+          second: 'numeric',
+        }
+
+        weather.sunrise = new Date(data.sys.sunrise * 1000).toLocaleString(
+          'de-DE',
+          options
+        )
+
+        weather.sunset = new Date(data.sys.sunset * 1000).toLocaleString(
+          'de-DE',
+          options
+        )
+
+        displayWeather()
+      })
+
+      .catch((error) => {
+        throw error
+      })
   }
 
   // celsius to fahrenheit conversion
