@@ -79,6 +79,10 @@
     text-align: center;
 }
 
+[data-desc="wea-desc"] {
+    text-transform: capitalize;
+}
+
 .wea-wind-sun-container {
     display: grid;
     grid-gap: 10px;
