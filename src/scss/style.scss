@@ -96,9 +96,10 @@ a.link-style {
 }
 
 .arrow-right-svg {
-    height: 28px;
+    flex: 0 0 30px;
+    margin-left: 8px;
 
     &.blog {
-        height: 24px;
+        flex: 0 0 30px;
     }
 }

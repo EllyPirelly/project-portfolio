@@ -11,15 +11,20 @@
 }
 
 /* blog wrapper */
-.blg-wrapper {
-    margin-top: 4em;
+.blg-wrapper.full-article {
     padding: 0 1em;
+}
+
+.blg-wrapper,
+.blg-wrapper.full-article {
+    margin-top: 40px;
 
     @media screen and (min-width: $breakpoint-xsmall) {
         padding: 0 2em;
     }
 
     @media screen and (min-width: $breakpoint-small) {
+        margin-top: 74px;
         padding: 0 3em;
     }
 
@@ -41,8 +46,17 @@
     box-shadow: 0 0 10px 0 $mediumgray;
     color: $verydarkgray;
     overflow-y: auto;
-    padding: 2em;
-    width: 100%;
+    margin: 0 8px;
+    padding: 1.5em;
+
+        &.full-article {
+            margin: 0;
+        }
+
+        @media screen and (min-width: $breakpoint-xsmall) {
+            margin: 0;
+            width: 100%;
+        }
 
       @media screen and (min-width: $breakpoint-medium) {
         --offset: 10em;
@@ -55,6 +69,7 @@
 }
 
 .blg-sidenav-headline {
+    font-family: "Bitter", serif;
     font-size: 1.25em;
     font-weight: 500;
 }
