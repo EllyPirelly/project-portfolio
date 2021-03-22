@@ -16,94 +16,94 @@
     background: repeating-linear-gradient(
             -45deg,
             $pastelgreen 3px,
-            $verydarkgray 3px,
-            $verydarkgray 6px,
+            $darkgray 3px,
+            $darkgray 6px,
             $pastelgreen 6px,
             $pastelgreen 9px
         ),
-        $verydarkgray;
+        $darkgray;
 }
 
 .main-headline.about:before {
     background: repeating-linear-gradient(
             -45deg,
             $pineappeslice 3px,
-            $verydarkgray 3px,
-            $verydarkgray 6px,
+            $darkgray 3px,
+            $darkgray 6px,
             $pineappeslice 6px,
             $pineappeslice 9px
         ),
-        $verydarkgray;
+        $darkgray;
 }
 
 .main-headline.code:before {
     background: repeating-linear-gradient(
             -45deg,
-            $lightmediumgray 3px,
-            $verydarkgray 3px,
-            $verydarkgray 6px,
-            $lightmediumgray 6px,
-            $lightmediumgray 9px
+            $darkgray85 3px,
+            $darkgray 3px,
+            $darkgray 6px,
+            $darkgray85 6px,
+            $darkgray85 9px
         ),
-        $verydarkgray;
+        $darkgray;
 }
 
 .main-headline.blog:before {
     background: repeating-linear-gradient(
             -45deg,
             $balletslipper 3px,
-            $verydarkgray 3px,
-            $verydarkgray 6px,
+            $darkgray 3px,
+            $darkgray 6px,
             $balletslipper 6px,
             $balletslipper 9px
         ),
-        $verydarkgray;
+        $darkgray;
 }
 
 .main-headline.publication:before {
     background: repeating-linear-gradient(
             -45deg,
             $blissfulblue 3px,
-            $verydarkgray 3px,
-            $verydarkgray 6px,
+            $darkgray 3px,
+            $darkgray 6px,
             $blissfulblue 6px,
             $blissfulblue 9px
         ),
-        $verydarkgray;
+        $darkgray;
 }
 
 .main-headline.under-construction:before {
     background: repeating-linear-gradient(
             -45deg,
             $pineappeslice 3px,
-            $verydarkgray 3px,
-            $verydarkgray 6px,
+            $darkgray 3px,
+            $darkgray 6px,
             $pineappeslice 6px,
             $pineappeslice 9px
         ),
-        $verydarkgray;
+        $darkgray;
 }
 
 .blg-main-headline:before {
     background: repeating-linear-gradient(
             -45deg,
             $pineappeslice 3px,
-            $verydarkgray 3px,
-            $verydarkgray 6px,
+            $darkgray 3px,
+            $darkgray 6px,
             $pineappeslice 6px,
             $pineappeslice 9px
         ),
-        $verydarkgray;
+        $darkgray;
 }
 
 .blg-main-headline.full-article:before {
     background: repeating-linear-gradient(
         -45deg,
         $paleorange 3px,
-        $verydarkgray 3px,
-        $verydarkgray 6px,
+        $darkgray 3px,
+        $darkgray 6px,
         $paleorange 6px,
         $paleorange 9px
     ),
-    $verydarkgray;
+    $darkgray;
 }

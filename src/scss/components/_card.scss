@@ -251,7 +251,7 @@
 }
 
 .code-container {
-    background-color: $lightmediumgray;
+    background-color: $darkgray85;
 }
 
 .main-headline.code {
@@ -279,9 +279,9 @@
 }
 
 .extra-content-button {
-    color: $verydarkgray;
+    color: $darkgray;
     background-color: $paleorange;
-    box-shadow: 0 0 10px 0 $mediumgray;
+    box-shadow: 0 0 10px 0 $darkgray60;
     font-family: "Bitter", serif;
     font-size: 1em;
     font-weight: 300;
@@ -290,13 +290,13 @@
     padding: 1em;
 
     &:hover {
-        background-color: $blissfulbluelight;
+        background-color: $blissfulblue85;
         cursor: pointer;
     }
 
     &:active,
     &:focus {
-        border: 1px solid $verydarkgray;
+        border: 1px solid $darkgray;
     }
 }
 

@@ -2,7 +2,7 @@
 .blg-quote-container {
     margin-left: -20px;
     padding-left: 24px;
-    box-shadow: inset 3px 0 0 0 $verydarkgray;
+    box-shadow: inset 3px 0 0 0 $darkgray;
     margin: 2.5em 0;
 }
 .blg-quote {
@@ -43,8 +43,8 @@
 /* blog sidenav */
 .blg-sidenav-wrapper {
     background-color: $paleorange;
-    box-shadow: 0 0 10px 0 $mediumgray;
-    color: $verydarkgray;
+    box-shadow: 0 0 10px 0 $darkgray60;
+    color: $darkgray;
     overflow-y: auto;
     margin: 0 8px;
     padding: 1.5em;
@@ -96,8 +96,8 @@
 
 .blg-sidenav-back-btn-container {
     align-items: center;
-    background: $blissfulbluelight;
-    border: 2px solid $blissfulbluemedium;
+    background: $blissfulblue85;
+    border: 2px solid $blissfulblue60;
     display: flex;
     height: 40px;
     position: relative;
@@ -133,19 +133,50 @@
 }
 
 .coding {
-    background-color: $blissfulblue;
+    background-color: $darkgray85;
 }
-
-.life {
-    background-color: $pastelgreen;
+.programming {
+    background-color: $darkgray60;
+}
+.developer {
+    background-color: $darkgray20;
+    color: $white;
 }
 
 .travel {
-    background-color: $pineappeslice;
+    background-color: $pastelgreen50darken;
+    color: $white;
+}
+.nature {
+    background-color: $pastelgreen50;
+}
+.life {
+    background-color: $pastelgreen65;
+}
+.philosophy {
+    background-color: $pastelgreen85;
+}
+
+.photography {
+    background-color: $delicateblue60;
+}
+.berlin {
+    background-color: $delicateblue50darken;
+    color: $white;
+}
+.technology {
+    background-color: $delicateblue75;
+}
+.writing {
+    background-color: $delicateblue50;
 }
 
 .cats {
-    background-color: $pumicestone;
+    background-color: $pumicestone50darken;
+    color: $white;
+}
+.catlife {
+    background-color: $pumicestone65;
 }
 
 /* blog author */
@@ -219,7 +250,7 @@
     }
 
     &.full-article {
-        border: 1px solid $verydarkgray;
+        border: 1px solid $darkgray;
 
         @media screen and (min-width: $breakpoint-small) {
             height: 300px;
@@ -264,7 +295,7 @@
     width: 50%;
 
     &.full-article {
-        border: 1px solid $verydarkgray;
+        border: 1px solid $darkgray;
     }
 }
 
