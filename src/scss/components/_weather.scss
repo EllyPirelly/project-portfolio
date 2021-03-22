@@ -47,7 +47,6 @@
     text-align: center;
 
     & img {
-        width: 100%;
 
         @media screen and (min-width: $breakpoint-mini) {
             width: auto;
@@ -67,6 +66,7 @@
     & p {
         cursor: pointer;
         font-size: 56px;
+        line-height: 1em;
     }
 }
 
