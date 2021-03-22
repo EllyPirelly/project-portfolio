@@ -82,10 +82,10 @@
 .blg-sidenav-link {
     display: inline-block;
     margin-right: 16px;
+    text-decoration: none;
 
     &:hover {
         background-color: #eef2f7;
-        text-decoration: none;
     }
 }
 
@@ -195,6 +195,11 @@
     }
 }
 
+.blg-fade-out-container {
+    height: 312px;
+    overflow: hidden;
+}
+
 .blg-article-snippet-link {
     text-decoration: none;
 }
@@ -248,7 +253,11 @@
 .blg-second-headline {
     font-size: 1.5em;
     font-weight: 500;
-    margin-top: 42px;
+    margin-top: 20px;
+
+    &.full-article {
+        margin-top: 42px;
+    }
 }
 
 .blg-second-img {
