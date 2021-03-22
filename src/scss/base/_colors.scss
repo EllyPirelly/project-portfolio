@@ -1,26 +1,75 @@
+/* used for lighten: https://pinetools.com/lighten-color */
+/* used for darken: https://pinetools.com/darken-color */
+
 $white: #fff;
 $black: #000;
 $paleorange: #fef8f4;
-$dirtypaleorange: #e2ded9;
 
 /* pantone palette */
+/* delicateblue */
+$delicateblue50darken: #3a779a;
 $delicateblue: #c2dae8;
+$delicateblue50: #e0ecf3;
+$delicateblue60: #e6f0f5;
+$delicateblue65: #e9f2f6;
+$delicateblue75: #eff5f9;
+$delicateblue85: #f5f9fb;
+
+/* pumicestone */
+$pumicestone50darken: #6e6153;
 $pumicestone: #cac2b9;
+$pumicestone50: #e4e0db;
+$pumicestone60: #e9e6e3;
+$pumicestone65: #ece9e6;
+$pumicestone75: #f1efed;
+$pumicestone85: #f7f5f4;
+
+/* pineappleslice */
+$pineappeslice50darken: #9a7e21;
 $pineappeslice: #e7d391;
+$pineappeslice50: #f3e9c8;
+$pineappeslice60: #f5edd3;
+$pineappeslice65: #f6efd8;
+$pineappeslice75: #f9f3e3;
+$pineappeslice85: #fbf8ee;
+
+/* pastelgreen */
+$pastelgreen50darken: #497b46;
 $pastelgreen: #b4d3b2;
-$pastelgreenlight: #f0f6ef;
+$pastelgreen50: #d9e9d8;
+$pastelgreen60: #e1ede0;
+$pastelgreen65: #e4efe4;
+$pastelgreen75: #ecf4eb;
+$pastelgreen85: #f3f8f3;
+
+/* blissfulblue */
+$blissfulblue50darken: #304c65;
 $blissfulblue: #7198bb;
-$blissfulbluelight: #eef2f7;
-$blissfulbluemedium: #e3e8ef;
+$blissfulblue50: #b7cbdd;
+$blissfulblue60: #c6d5e3;
+$blissfulblue65: #cddae7;
+$blissfulblue75: #dbe5ee;
+$blissfulblue85: #e9eff4;
+
+/* balletslipper */
+$balletslipper50darken: #9f3d54 ;
 $balletslipper: #ecced5;
+$balletslipper50: #f5e6ea;
+$balletslipper60: #f7ebee;
+$balletslipper65: #f8edf0;
+$balletslipper75: #faf2f4;
+$balletslipper85: #fcf7f8;
 
 /* gray palette */
-$lightgray: #f0f0f0;
-$lightmediumgray: #dcdcdc;
-$mediumgray: #a9a9a9;
-$darkmediumgray: #888888;
-$darkgray: #404040;
-$verydarkgray: #282828;
+$darkgray50darken: #141414;
+$darkgray: #282828;
+$darkgray20: #535353;
+$darkgray30: #686868;
+$darkgray50: #939393;
+$darkgray60: #a9a9a9;
+$darkgray75: #c9c9c9;
+$darkgray85: #dedede;
+$darkgray95: #f4f4f4;
 
 /* error colors */
 $errorbackground: #f8d7da;
