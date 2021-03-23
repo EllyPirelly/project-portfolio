@@ -42,38 +42,71 @@
         <!-- blog detail page-->
         <main class="blg-wrapper full-article">
             <!-- sidenav -->
-            <nav class="blg-sidenav-wrapper" role="navigation">
-                <section class="blg-sidenav-posts-container">
-                    <h2 class="blg-sidenav-headline">Blog Posts Overview</h2>
-                    <a href="./blog-my-first-medium-article.html" class="blg-sidenav-link">My first Medium article</a>
-                    <a href="./blog-dummy01.html" class="blg-sidenav-link">Lorem Dummy 01</a>
-                    <a href="./blog-dummy02.html" class="blg-sidenav-link">Dummy Ipsum Dolor 02</a>
-                    <a href="./blog-dummy03.html" class="blg-sidenav-link">At Verso Dummy 03</a>
-                    <a href="./blog-dummy04.html" class="blg-sidenav-link">Accusam Dummy et 04</a>
-                    <a href="./blog-dummy05.html" class="blg-sidenav-link">Dummy Sanctus Est 05</a>
-                </section>
-                <section class="blg-sidenav-back-btn">
-                    <a href="/index#about-me" class="blg-sidenav-back-btn-container wobble-link">
-                        <svg class="blg-sidenav-back-btn-arrow" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <nav class="sn-wrapper" role="navigation">
+                <!-- back to homepage -->
+                <section class="sn-back-btn">
+                    <a href="/index#about-me" class="sn-back-btn-container wobble-link">
+                        <svg class="sn-back-btn-arrow" fill="currentColor" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path d="M231.536 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113L238.607 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L3.515 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"/>
                         </svg>
-                        <span class="blg-sidenav-back-btn-text">Back to Homepage</span>
+                        <span class="sn-back-btn-text">Back to Homepage</span>
                     </a>
                 </section>
-                <section class="blg-sidenav-tag-container">
-                    <h2 class="blg-sidenav-headline">Filter via tags</h2>
-                    <a href="#" class="blg-sidenav-tag-link">
-                        <span class="blg-sidenav-tag coding">TODO One</span>
+                <!-- blog posts overview -->
+                <section class="sn-bp-container">
+                    <a href="./blog-overview.html" class="sn-headline-link">
+                        <h2 class="sn-headline">Blog Posts Overview</h2>
                     </a>
-                    <a href="#" class="blg-sidenav-tag-link">
-                        <span class="blg-sidenav-tag life">TODO Two</span>
-                    </a>
-                    <a href="#" class="blg-sidenav-tag-link">
-                        <span class="blg-sidenav-tag travel">TODO Three</span>
-                    </a>
-                    <a href="#" class="blg-sidenav-tag-link">
-                        <span class="blg-sidenav-tag cats">TODO Four</span>
-                    </a>
+                    <div class="sn-bp-wrapper">
+                        <a href="./blog-my-first-medium-article.html" class="sn-bp-link">My first Medium article<span class="sn-bp-seperator">|</span></a>
+                        <a href="./blog-dummy01.html" class="sn-bp-link">Lorem Dummy 01<span class="sn-bp-seperator">|</span></a>
+                        <a href="./blog-dummy02.html" class="sn-bp-link">Dummy Ipsum Dolor 02<span class="sn-bp-seperator">|</span></a>
+                        <a href="./blog-dummy03.html" class="sn-bp-link">At Verso Dummy 03<span class="sn-bp-seperator">|</span></a>
+                        <a href="./blog-dummy04.html" class="sn-bp-link">Accusam Dummy et 04<span class="sn-bp-seperator">|</span></a>
+                        <a href="./blog-dummy05.html" class="sn-bp-link">Dummy Sanctus Est 05</a>
+                    </div>
+                </section>
+                <!-- tags in side navi -->
+                <section class="sn-tag-container">
+                    <h2 class="sn-headline">Filter by tags</h2>
+                    <div class="sn-tag-wrapper">
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">coding</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">programming</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">developer</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">travel</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">nature</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">life</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">philosophy</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">photography</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">berlin</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">technology</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">writing</span>
+                        </a>
+                        <a href="#" class="sn-tag-link">
+                            <span class="sn-tag">catlife</span>
+                        </a>
+                    </div>
                 </section>
             </nav>
             <!-- blog entry - detailed -->
@@ -93,6 +126,23 @@
                         </span>
                     </section>
                     <hr class="hr-line">
+                    <!-- tags in blog post -->
+                    <section class="sn-tag-container">
+                        <div class="sn-tag-wrapper">
+                            <a href="#" class="sn-tag-link">
+                                <span class="sn-tag">life</span>
+                            </a>
+                            <a href="#" class="sn-tag-link">
+                                <span class="sn-tag">berlin</span>
+                            </a>
+                            <a href="#" class="sn-tag-link">
+                                <span class="sn-tag">catlife</span>
+                            </a>
+                            <a href="#" class="sn-tag-link">
+                                <span class="sn-tag">philosophy</span>
+                            </a>
+                        </div>
+                    </section>
                     <h3 class="blg-second-headline full-article">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed?</h3>
                     <p class="blg-main-text">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     <p class="blg-main-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
