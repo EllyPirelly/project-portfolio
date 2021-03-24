@@ -22,7 +22,7 @@ const WeatherApp = (function () {
   const weatherSunrise = document.querySelector('[data-sunrise="wea-sunrise"]')
   const weatherSunset = document.querySelector('[data-sunset="wea-sunset"]')
 
-  // empty objec for (fetched) data
+  // empty object for (fetched) data
   const weather = {}
 
   weather.temperature = {
@@ -39,6 +39,34 @@ const WeatherApp = (function () {
     weatherWinddir.innerHTML = weather.winddir
     weatherSunrise.innerHTML = weather.sunrise
     weatherSunset.innerHTML = weather.sunset
+  }
+
+  const lang = document.documentElement.lang
+
+  // translation GB <-> DE
+  const translations = {
+    en: {
+      'clear sky': 'clear sky',
+      'few clouds': 'few clouds',
+      'scattered clouds': 'scattered clouds',
+      'broken clouds': 'broken clouds',
+      'shower rain': 'shower rain',
+      rain: 'rain',
+      thunderstorm: 'thunderstorm',
+      snow: 'snow',
+      mist: 'mist',
+    },
+    de: {
+      'clear sky': 'klarer Himmel',
+      'few clouds': 'vereinzelt Wolken',
+      'scattered clouds': 'bewölkt',
+      'broken clouds': 'aufreißende Bewölkung',
+      'shower rain': 'vereinzelt Schauer',
+      rain: 'Regen',
+      thunderstorm: 'Gewitter',
+      snow: 'Schnee',
+      mist: 'Nebel',
+    },
   }
 
   // m/sec to km/h
@@ -84,9 +112,16 @@ const WeatherApp = (function () {
         weather.country = data.sys.country
         weather.iconId = data.weather[0].icon
         weather.temperature.value = Math.floor(data.main.temp)
-        weather.description = data.weather[0].description
         weather.windspeed = mSecToKmh(Math.round(data.wind.speed))
         weather.winddir = degreeToCompass(data.wind.deg)
+
+        const weatherDescription = data.weather[0].description
+
+        const grabTranslation = (weathertransValue) => {
+          return translations[lang][weathertransValue]
+        }
+
+        weather.description = grabTranslation(weatherDescription)
 
         const options = {
           hour: 'numeric',
