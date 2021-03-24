@@ -175,3 +175,25 @@
     height: 1.5em;
     margin: 0 0.3em;
 }
+
+.blg-tag-container {
+    margin-top: 6px;
+}
+
+.blg-tag-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blg-tag {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-right: 16px;
+}
+
+.blg-tag-svg {
+    height: 1.5em;
+    margin-right: 4px;
+}
