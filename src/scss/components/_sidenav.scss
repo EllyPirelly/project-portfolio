@@ -89,6 +89,20 @@
     margin: 12px 0;
 }
 
+.tagitem-container {
+    margin-top: 1.5em;
+    padding: 0 1.5em;
+
+    @media screen and (min-width: $breakpoint-xsmall) {
+        padding: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+}
+
 .tag-headline {
     display: flex;
     font-family: "Bitter", serif;
@@ -97,7 +111,7 @@
     margin-right: 12px;
 }
 
-.tag-link {
+.tag-item {
     background-color: $pineappeslice65;
     border: 1px solid $pineappeslice50darken;
     border-radius: 4px;
