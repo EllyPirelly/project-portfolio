@@ -1,0 +1,103 @@
+/* tag container */
+.tagitems-container {
+    margin-top: 1.5em;
+    padding: 0 1.5em;
+
+    @media screen and (min-width: $breakpoint-xsmall) {
+        padding: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+}
+
+.tagitems-headline {
+    display: flex;
+    font-family: "Bitter", serif;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin-right: 12px;
+}
+
+
+/* tags */
+.tagitems-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .taglink {
+    color: inherit;
+    font-size: 16px;
+    margin-right: 8px;
+    margin-top: 22px;
+    text-decoration: none;
+  }
+
+  .tagcheckbox {
+    display: none;
+
+    &:checked ~ .tagbtn {
+      background-color: #9a7e21;
+      color: #fbf8ee;
+    }
+  }
+
+  .tagbtn {
+    background-color: #f6efd8;
+    border: 1px solid #9a7e21;
+    border-radius: 4px;
+    padding: 6px 8px;
+
+    &:hover {
+      background-color: #e7d391;
+    }
+  }
+
+  .tagselectbtn-wrapper {
+    margin-top: 16px;
+  }
+
+  .tagselect {
+    background-color: #9a7e21;
+    color: #fbf8ee;
+    border: 1px solid #9a7e21;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 8px;
+    padding: 10px;
+    transition-duration: .2s;
+
+    &:hover {
+      box-shadow: 0 4px 8px 0 #a9a9a9;
+    }
+  }
+
+
+/*
+.tagitems-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.taglink {
+    background-color: $pineappeslice65;
+    border: 1px solid $pineappeslice50darken;
+    border-radius: 4px;
+    padding: 4px 6px;
+    text-decoration: none;
+    margin-top: 8px;
+    margin-right: 8px;
+
+    &:hover {
+        background-color: $pineappeslice50darken;
+        color: $pineappeslice85;
+    }
+}
+
+.tagtext {
+    font-size: 14px;
+}
+ */

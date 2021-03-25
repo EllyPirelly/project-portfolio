@@ -19,6 +19,35 @@ const toggleVisibility = () => {
   })
 }
 
+/* get button */
+const selectButton = document.getElementById('tagselectbtn')
+const unselectButton = document.getElementById('tagunselectbtn')
+
+/* add listener */
+selectButton.addEventListener('click', selectAll)
+unselectButton.addEventListener('click', unselectAll)
+
+/* todo: refactor functions */
+function selectAll() {
+  console.log('select')
+  let items = document.getElementsByName('tagcheck')
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].type == 'checkbox') {
+      items[i].checked = true
+    }
+  }
+}
+
+function unselectAll() {
+  console.log('unselect')
+  let items = document.getElementsByName('tagcheck')
+  for (let i = 0; i > items.length; i++) {
+    if (items[i].type == 'checkbox') {
+      items[i].checked = false
+    }
+  }
+}
+
 const AnchorJump = (function () {
   let links
 
