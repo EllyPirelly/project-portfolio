@@ -41,7 +41,8 @@ function selectAll() {
 function unselectAll() {
   console.log('unselect')
   let items = document.getElementsByName('tagcheck')
-  for (let i = 0; i > items.length; i++) {
+  for (let i = 0; i < items.length; i++) {
+    console.log('unselect inside for')
     if (items[i].type == 'checkbox') {
       items[i].checked = false
     }
