@@ -92,78 +92,18 @@
                         </svg></h2>
                     <!-- new -->
                     <div class="tagitems-wrapper">
-                        <a href="#" class="taglink" data-tag-link="coding">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-coding">
-                            <label class="tagbtn" for="tg-coding">
-                                <span class="tagtext">coding</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="programming">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-programming">
-                            <label class="tagbtn" for="tg-programming">
-                                <span class="tagtext">programming</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="developer">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-developer">
-                            <label class="tagbtn" for="tg-developer">
-                                <span class="tagtext">developer</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="travel">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-travel">
-                            <label class="tagbtn" for="tg-travel">
-                                <span class="tagtext">travel</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="nature">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-nature">
-                            <label class="tagbtn" for="tg-nature">
-                                <span class="tagtext">nature</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="life">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-life">
-                            <label class="tagbtn" for="tg-life">
-                                <span class="tagtext">life</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="philosophy">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-philosophy">
-                            <label class="tagbtn" for="tg-philosophy">
-                                <span class="tagtext">philosophy</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="photography">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-photography">
-                            <label class="tagbtn" for="tg-photography">
-                                <span class="tagtext">photography</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="berlin">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-berlin">
-                            <label class="tagbtn" for="tg-berlin">
-                                <span class="tagtext">berlin</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="technology">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-technology">
-                            <label class="tagbtn" for="tg-technology">
-                                <span class="tagtext">technology</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="writing">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-writing">
-                            <label class="tagbtn" for="tg-writing">
-                                <span class="tagtext">writing</span>
-                            </label>
-                        </a>
-                        <a href="#" class="taglink" data-tag-link="catlife">
-                            <input class="tagcheckbox" data-input="tagcheck" type="checkbox" id="tg-catlife">
-                            <label class="tagbtn" for="tg-catlife">
-                                <span class="tagtext">catlife</span>
-                            </label>
-                        </a>
+                        <a href="#" class="taglink" data-tag-link="coding">coding</a>
+                        <a href="#" class="taglink" data-tag-link="programming">programming</a>
+                        <a href="#" class="taglink" data-tag-link="developer">developer</a>
+                        <a href="#" class="taglink" data-tag-link="travel">travel</a>
+                        <a href="#" class="taglink" data-tag-link="nature">nature</a>
+                        <a href="#" class="taglink" data-tag-link="life">life</a>
+                        <a href="#" class="taglink" data-tag-link="philosophy">philosophy</a>
+                        <a href="#" class="taglink" data-tag-link="photography">photography</a>
+                        <a href="#" class="taglink" data-tag-link="berlin">berlin</a>
+                        <a href="#" class="taglink" data-tag-link="technology">technology</a>
+                        <a href="#" class="taglink" data-tag-link="writing">writing</a>
+                        <a href="#" class="taglink" data-tag-link="catlife">catlife</a>
                     </div>
                     <div class="tagselectbtn-wrapper">
                         <button type="button" class="tagselect allselect" data-button="select">Select
@@ -172,7 +112,7 @@
                     </div>
                 </section>
                 <!-- blog entry medium -->
-                <article class="blg-entry-container"
+                <article class="blg-entry-container hide" data-element="blog-post"
                     data-tags="coding programming developer philosophy technology writing">
                     <a href="./blog-my-first-medium-article.html" class="blg-article-snippet-link">
                         <h1 class="blg-main-headline">My first Medium article</h1>
@@ -222,7 +162,8 @@
                     </svg>
                 </div>
                 <!-- blog entry 01 -->
-                <article class="blg-entry-container" data-tags="life berlin catlife philosophy">
+                <article class="blg-entry-container" data-element="blog-post"
+                    data-tags="life berlin catlife philosophy">
                     <a href="./blog-dummy01.html" class="blg-article-snippet-link">
                         <h1 class="blg-main-headline">Lorem ipsum dolor sit a - 01</h1>
                         <img src="../img/blog/740x480_dummy01.png" alt="" class="blg-hero-img">
@@ -269,7 +210,7 @@
                     </svg>
                 </div>
                 <!-- blog entry 02 -->
-                <article class="blg-entry-container"
+                <article class="blg-entry-container" data-element="blog-post"
                     data-tags="coding programming developer travel nature life photography berlin">
                     <a href="./blog-dummy02.html" class="blg-article-snippet-link">
                         <h1 class="blg-main-headline">Lorem ipsum dolor sit a - 02</h1>
@@ -318,7 +259,8 @@
                     </svg>
                 </div>
                 <!-- blog entry 03 -->
-                <article class="blg-entry-container" data-tags="travel nature technology writing catlife">
+                <article class="blg-entry-container" data-element="blog-post"
+                    data-tags="travel nature technology writing catlife">
                     <a href="./blog-dummy03.html" class="blg-article-snippet-link">
                         <h1 class="blg-main-headline">Lorem ipsum dolor sit a - 03</h1>
                         <img src="../img/blog/740x480_dummy03.png" alt="" class="blg-hero-img">
@@ -365,7 +307,8 @@
                     </svg>
                 </div>
                 <!-- blog entry 04 -->
-                <article class="blg-entry-container" data-tags="programming life philosophy photography berlin">
+                <article class="blg-entry-container" data-element="blog-post"
+                    data-tags="programming life philosophy photography berlin">
                     <a href="./blog-dummy04.html" class="blg-article-snippet-link">
                         <h1 class="blg-main-headline">Lorem ipsum dolor sit a - 04</h1>
                         <img src="../img/blog/740x480_dummy04.png" alt="" class="blg-hero-img">
@@ -413,7 +356,8 @@
                     </svg>
                 </div>
                 <!-- blog entry 05 -->
-                <article class="blg-entry-container" data-tags="developer nature photography technology catlife">
+                <article class="blg-entry-container" data-element="blog-post"
+                    data-tags="developer nature photography technology catlife">
                     <a href="./blog-dummy05.html" class="blg-article-snippet-link">
                         <h1 class="blg-main-headline">Lorem ipsum dolor sit a - 05</h1>
                         <img src="../img/blog/740x480_dummy05.png" alt="" class="blg-hero-img">
