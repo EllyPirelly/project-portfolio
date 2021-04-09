@@ -1,159 +1,160 @@
+// toggle
 const toggleClass = (item, targetItem) => {
-  if (item.getAttribute('data-toggle')) {
-    targetItem.classList.toggle('toggle')
-  } else {
-    targetItem.classList.remove('toggle')
-  }
+    if (item.getAttribute('data-toggle')) {
+        targetItem.classList.toggle('toggle')
+    } else {
+        targetItem.classList.remove('toggle')
+    }
 }
 
 const toggleVisibility = () => {
-  const toggleItems = Array.from(document.querySelectorAll('[data-toggle]'))
+    const toggleItems = Array.from(document.querySelectorAll('[data-toggle]'));
 
-  toggleItems.forEach((toggle) => {
-    const targetSelector = toggle.getAttribute('data-target')
-    const targetPiece = document.querySelector(targetSelector)
+    toggleItems.forEach((toggle) => {
+        const targetSelector = toggle.getAttribute('data-target');
+        const targetPiece = document.querySelector(targetSelector);
 
-    toggle.addEventListener('click', function () {
-      toggleClass(this, targetPiece)
+        toggle.addEventListener('click', function () {
+            toggleClass(this, targetPiece);
+        })
     })
-  })
 }
 
-const blogTeaserSelection = (function () {
-  let selectAllButton
-  let unselectAllButton
-  let tagItems
-  let tagLinks
-  let tag
+// filter/show blog snippets
+const blogSnippets = (function () {
 
-  /* array for collected/selected tags */
-  const tagCollection = []
+    let selectAllButton;
+    let unselectAllButton;
+    let tag;
+    let tagCollection = [];
+    let tagLinks = [];
+    let blogPosts = [];
 
-  /* grab select/unselect button */
-  const getButtonElement = () => {
-    selectAllButton = document.querySelector('[data-button="select"]')
-    unselectAllButton = document.querySelector('[data-button="unselect"]')
-  }
-
-  /* check if select/unselect button element is present, add listener, invoke funcs */
-  const buttonAction = () => {
-    if (selectAllButton !== null && unselectAllButton !== null) {
-      selectAllButton.addEventListener('click', () => {
-        checkAllTagItems()
-        showBlogPosts()
-      })
-      unselectAllButton.addEventListener('click', () => {
-        uncheckAllTagItems()
-        showBlogPosts()
-      })
+    const getButtonElement = () => {
+        selectAllButton = document.querySelector('[data-button="select"]');
+        unselectAllButton = document.querySelector('[data-button="unselect"]');
     }
 
-    /* grab tagItems (input tag) - check all */
-    function checkAllTagItems() {
-      tagItems = document.querySelectorAll('[data-input="tagcheck"]')
-      for (let i = 0; i < tagItems.length; i++) {
-        if (tagItems[i].type == 'checkbox') {
-          tagItems[i].checked = true
+    const buttonAction = () => {
+        if (selectAllButton !== null && unselectAllButton !== null) {
+            selectAllButton.addEventListener('click', () => {
+                tagLinkClicked(tagLinks);
+                showBlogPosts(blogPosts);
+            })
+            unselectAllButton.addEventListener('click', () => {
+                tagLinkUnclicked(tagLinks);
+                showBlogPosts(blogPosts);
+            })
         }
-      }
     }
 
-    /* grab tagItems (input tag) - uncheck all */
-    function uncheckAllTagItems() {
-      tagItems = document.querySelectorAll('[data-input="tagcheck"]')
-      for (let i = 0; i < tagItems.length; i++) {
-        if (tagItems[i].type == 'checkbox') {
-          tagItems[i].checked = false
+    const getTagLinks = () => {
+        tagLinks = Array.from(document.querySelectorAll('[data-tag-link]'));
+    }
+
+    /* better and cleverer solution to combine both?? */
+    const tagLinkClicked = (tagLinks) => {
+        tagLinks.forEach(tagLink => {
+            tagLink.classList.add('clicked');
+            /* remove hover state???? how? */
+            tagLink.classList.remove('taglink:hover');
+        })
+    }
+    const tagLinkUnclicked = (tagLinks) => {
+        tagLinks.forEach(tagLink => {
+            tagLink.classList.remove('clicked');
+        })
+    }
+
+    /* same here, when above can be solved better, same applies to this?? */
+    const tagCollectionPopulation = () => {
+        tagLinks.forEach((tagLink) => {
+            tagLink.addEventListener('click', function () {
+                tag = this.getAttribute('data-tag-link');
+                tagLink.classList.add('clicked');
+                tagLinkPresence(tag);
+            })
+        })
+    }
+    function tagLinkPresence(tag) {
+        if (!tagCollection.includes(tag)) {
+            tagCollection.push(tag);
+        } else {
+            const index = tagCollection.indexOf(tag);
+            tagCollection.splice(index, 1);
         }
-      }
+        console.log('tagCollection', tagCollection);
     }
 
-    function showBlogPosts() {
-      // ToDo - show only selected/checked teaser
+    const getBlogPosts = () => {
+        blogPosts = Array.from(document.querySelectorAll('[data-element="blog-post"]'));
     }
-  }
 
-  /* grab tagLinks (a tag) elements */
-  const getTagLinks = () => {
-    tagLinks = Array.from(document.querySelectorAll('[data-tag-link]'))
-  }
-
-  /* add listener on single tagLink element */
-  const tagAction = () => {
-    tagLinks.forEach((tagLink) => {
-      tagLink.addEventListener('click', function () {
-        tag = this.getAttribute('data-tag-link')
-        checkTagLink(tag)
-      })
-    })
-
-    /* tag - push/pull to tagCollection array */
-    function checkTagLink(tag) {
-      if (!tagCollection.includes(tag)) {
-        tagCollection.push(tag)
-      } else if (tagCollection.includes(tag)) {
-        tagCollection.pop(tag)
-      }
-      console.log(tag)
-      console.log(tagCollection)
+    const showBlogPosts = (posts) => {
+        posts.forEach(post => {
+            post.classList.remove('hide');
+        })
     }
-  }
 
-  /* create URL of selected tags, set created URL back to default */
-  const createURL = () => {
-    // adapt query string to selection -> blogoverview.html?tags=...,...
-    // remove query string from URL back to default/base
-  }
+    const createURL = () => {
+        // adapt query string to selection -> /blog/blog-overview.html?tags=...,...
+        // remove query string from URL back to default/base
+        // let baseUrl = window.location.origin
+        // URLSearchParams.append(name, value)
+    }
 
-  const init = () => {
-    getButtonElement()
-    buttonAction()
-    getTagLinks()
-    tagAction()
-    createURL()
-  }
+    const init = () => {
+        getBlogPosts();
+        getButtonElement();
+        getTagLinks();
+        buttonAction();
+        tagCollectionPopulation();
+        createURL();
+    }
 
-  return {
-    init,
-  }
+    return {
+        init,
+    }
 })()
 
+/* anchor jump */
 const AnchorJump = (function () {
-  let links
 
-  const setLinks = () => {
-    links = Array.from(document.querySelectorAll('[data-link]'))
-  }
+    let links;
 
-  const linkAction = function (event) {
-    event.preventDefault()
+    const setLinks = () => {
+        links = Array.from(document.querySelectorAll('[data-link]'));
+    }
 
-    const href = this.getAttribute('href')
-    const target = document.querySelector(href)
+    const linkAction = function (event) {
+        event.preventDefault();
 
-    history.pushState(null, null, href)
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
-  }
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
 
-  const setLinkAction = () => {
-    links.forEach((link) => link.addEventListener('click', linkAction))
-  }
+        history.pushState(null, null, href);
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        })
+    }
 
-  const init = () => {
-    setLinks()
-    setLinkAction()
-  }
+    const setLinkAction = () => {
+        links.forEach((link) => link.addEventListener('click', linkAction));
+    }
 
-  return {
-    init,
-  }
+    const init = () => {
+        setLinks();
+        setLinkAction();
+    }
+
+    return {
+        init,
+    }
 })()
 
 document.addEventListener('DOMContentLoaded', () => {
-  AnchorJump.init()
-  toggleVisibility()
-  blogTeaserSelection.init()
+    AnchorJump.init();
+    toggleVisibility();
+    blogSnippets.init();
 })
