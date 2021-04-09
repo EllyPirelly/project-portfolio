@@ -56,10 +56,9 @@ const blogSnippets = (function () {
     const tagLinkClicked = (tagLinks) => {
         tagLinks.forEach(tagLink => {
             tagLink.classList.add('clicked');
-            /* remove hover state???? how? */
-            tagLink.classList.remove('taglink:hover');
         })
     }
+
     const tagLinkUnclicked = (tagLinks) => {
         tagLinks.forEach(tagLink => {
             tagLink.classList.remove('clicked');
@@ -76,6 +75,7 @@ const blogSnippets = (function () {
             })
         })
     }
+
     function tagLinkPresence(tag) {
         if (!tagCollection.includes(tag)) {
             tagCollection.push(tag);

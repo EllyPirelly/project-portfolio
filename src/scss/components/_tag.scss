@@ -41,6 +41,12 @@
     &.clicked {
         background-color: $pineappeslice50darken;
         color: $pineappeslice85;
+
+        &:hover {
+            background-color: $pineappeslice50darken;
+            border: 1px solid $pineappeslice50darken;
+            color: $pineappeslice85;
+        }
     }
 
     &:hover {
