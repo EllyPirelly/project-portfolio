@@ -2,17 +2,20 @@
 
 ### What is this about?
 
-- first draft of my portfolio site where I try out things
-- first draft is NOT modular on purpose, as I've developped content and design along the way, so extent of site was unclear when starting
-- next step (when finished) will be refactoring this portfolio site to a modular approach
+- first draft of my portfolio site
+- this draft is **NOT modular on purpose**
+-  content and design have been developped along the way, so extent and complexity of site was unclear when starting
+- TODO: refactoring this portfolio site to a modular approach
 
 ### Preconditions
 
-- figure out design myself
-- figure out possible content
-- take care of images, svgs, et all myself
-- build this with HTML, SCSS, (vanilla) JavaScript - NONMODULAR
-- try out [parcel.js](https://parceljs.org/getting_started.html), as a less work intense bundler than Webpack
+As at the beginning all I came up with was "I want a website":
+- start building with HTML and (vanilla) JavaScript - **non-modular**
+- use SCSS
+    - try out [parcel.js](https://parceljs.org/getting_started.html), as a less work intense bundler than Webpack
+- come up with design myself
+- taking care of images, svgs, et all myself
+- come up with possible content
 
 ### How to run this?
 
