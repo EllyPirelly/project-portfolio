@@ -4,18 +4,24 @@
 
 - first draft of my portfolio site
 - this draft is **NOT modular on purpose**
--  content and design have been developped along the way, so extent and complexity of site was unclear when starting
-- TODO: refactoring this portfolio site to a modular approach
+- content and design have been developped while coding, so extent and complexity of site was unclear at start
+- TODO: refactoring of the first draft to a modular approach
 
 ### Preconditions
 
-As at the beginning all I came up with was "I want a website":
+As at the beginning there only was this statement: "I want a website".<br>
+From that, following preconditions have been derived:
+
 - start building with HTML and (vanilla) JavaScript - **non-modular**
 - use SCSS
-    - try out [parcel.js](https://parceljs.org/getting_started.html), as a less work intense bundler than Webpack
+  - use [parcel.js](https://parceljs.org/getting_started.html) as a less work intense bundler than Webpack
 - come up with design myself
-- taking care of images, svgs, et all myself
-- come up with possible content
+- taking care of images, svgs, etc, myself
+- create content
+
+### Collaboration
+
+The filtering function for the blogpost overview page has been developped in collaboration with [@bermael](https://github.com/bermael)
 
 ### How to run this?
 
@@ -25,7 +31,3 @@ As at the beginning all I came up with was "I want a website":
 - to run in development mode: `npm run dev`, this will fire up the server at http://localhost:1234
 - to run in production mode: `npm run build`, this will also minify your files into the `dist` folder
 - stop the server with `control c`
-
-### TODO / ongoing
-
-- implementation of filtering for tagged blog posts
