@@ -21,7 +21,7 @@ From that, following preconditions have been derived:
 
 ### Collaboration
 
-The filtering function for the blogpost overview page has been developped in collaboration with @bermael
+The filtering function for the blogpost overview page has been developped in collaboration with [@bermael](https://github.com/bermael)
 
 ### How to run this?
 
