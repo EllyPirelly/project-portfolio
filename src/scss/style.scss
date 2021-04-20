@@ -96,6 +96,7 @@ a.link-style {
 }
 
 .arrow-right-svg {
+    color: $darkgray;
     flex: 0 0 30px;
     margin-left: 8px;
 
@@ -103,3 +104,58 @@ a.link-style {
         flex: 0 0 30px;
     }
 }
+
+/* prefers color scheme - ONLY TEST DO NOT KEEP LIKE THIS! */
+
+  body {
+    // transition of mode change
+    --duration: 0.5s;
+    --timing: ease;
+
+    // light when OS light mode is set
+    --bkg-color: $paleorange;
+    --text-color: $darkgray;
+
+    color: var(--text-color);
+    background-color: var(--bkg-color);
+    transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
+
+    // dark when OS light mode is set
+    &.dark-theme {
+      --text-color: #282828;
+      --bkg-color: #9d5d32;
+    }
+
+    &.dark-theme img {
+      filter: brightness(.8) contrast(1.2);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    body {
+      // dark when OS dark mode is set
+      &.dark-theme {
+          --text-color: yellow;
+          --bkg-color: purple;
+      }
+
+      // light when OS dark mode is set
+      &.light-theme {
+        --text-color: purple;
+        --bkg-color: yellow;
+      }
+    }
+  }
+
+  h1,
+  p {
+    color: var(--text-color);
+  }
+
+
+  /* TO CHECK*/
+  /* as root or better (?) as style tag in html head: <meta name="color-scheme" content="dark light"> - avoid FOIT*/
+  /*:root {
+  color-scheme: light dark;
+  }*/
