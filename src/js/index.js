@@ -1,3 +1,27 @@
+// dark-light mode
+const darkLightMode = (function () {
+
+    if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+        console.log('🎉 Dark mode is supported');
+    }
+
+    /*     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        darkModeMediaQuery.addListener((e) => {
+            const darkModeOn = e.matches;
+            console.log(`Dark mode is ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
+        }); */
+
+
+
+    const init = () => {
+        console.log('inside init')
+    }
+
+    return {
+        init
+    }
+})()
+
 // toggle
 const toggleClass = (item, targetItem) => {
     if (item.getAttribute('data-toggle')) {
@@ -194,6 +218,7 @@ const AnchorJump = (function () {
 })()
 
 document.addEventListener('DOMContentLoaded', () => {
+    darkLightMode.init();
     AnchorJump.init();
     toggleVisibility();
     blogFractionSelection.init();
