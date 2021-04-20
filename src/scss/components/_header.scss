@@ -126,6 +126,14 @@ button {
     @media screen and (min-width: $breakpoint-xlarge) {
         right: 130px;
     }
+
+    @media screen and (min-width: 1244px) {
+        right: 20px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        right: 120px;
+    }
 }
 
 .icon-mode-svg {
@@ -134,7 +142,6 @@ button {
     height: 40px;
     padding: 4px;
 }
-
 
 .icon-mode-svg.sun {
     background-color: $paleorange;
