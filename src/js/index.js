@@ -1,20 +1,42 @@
 // dark-light mode
 const darkLightMode = (function () {
 
-    if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-        console.log('🎉 Dark mode is supported');
+    const darkLightToggle = () => {
+
+        // check if prefers-color-scheme is available
+        /*if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+            console.log('🎉 Dark mode is supported');
+        } */
+
+        const btn = document.querySelector(".icon-mode-button");
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+        // get current theme from localStorage
+        const currentTheme = localStorage.getItem("theme");
+
+        // toggle css color themes
+        if (currentTheme == "dark") {
+            document.body.classList.toggle("dark-theme");
+        } else if (currentTheme == "light") {
+            document.body.classList.toggle("light-theme");
+        }
+
+        // check and save scheme decision to localStorage
+        btn.addEventListener("click", function () {
+            if (prefersDarkScheme.matches) {
+                document.body.classList.toggle("light-theme");
+                var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+            } else {
+                document.body.classList.toggle("dark-theme");
+                var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+            }
+            localStorage.setItem("theme", theme);
+        });
+
     }
 
-    /*     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        darkModeMediaQuery.addListener((e) => {
-            const darkModeOn = e.matches;
-            console.log(`Dark mode is ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
-        }); */
-
-
-
     const init = () => {
-        console.log('inside init')
+        darkLightToggle();
     }
 
     return {
@@ -178,8 +200,6 @@ const blogFractionSelection = (function () {
         init
     }
 })()
-
-
 
 /* anchor jump */
 const AnchorJump = (function () {
