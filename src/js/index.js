@@ -1,36 +1,42 @@
 // dark-light mode
 const darkLightMode = (function () {
 
-    // check if prefers-color-scheme is available
-    /*     if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+    const darkLightToggle = () => {
+
+        // check if prefers-color-scheme is available
+        /*if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
             console.log('🎉 Dark mode is supported');
         } */
 
-    const btn = document.querySelector(".icon-mode-button");
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const btn = document.querySelector(".icon-mode-button");
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-    // save scheme decision to localStorage
-    const currentTheme = localStorage.getItem("theme");
+        // get current theme from localStorage
+        const currentTheme = localStorage.getItem("theme");
 
-    if (currentTheme == "dark") {
-        document.body.classList.toggle("dark-theme");
-    } else if (currentTheme == "light") {
-        document.body.classList.toggle("light-theme");
+        // toggle css color themes
+        if (currentTheme == "dark") {
+            document.body.classList.toggle("dark-theme");
+        } else if (currentTheme == "light") {
+            document.body.classList.toggle("light-theme");
+        }
+
+        // check and save scheme decision to localStorage
+        btn.addEventListener("click", function () {
+            if (prefersDarkScheme.matches) {
+                document.body.classList.toggle("light-theme");
+                var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+            } else {
+                document.body.classList.toggle("dark-theme");
+                var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+            }
+            localStorage.setItem("theme", theme);
+        });
+
     }
 
-    btn.addEventListener("click", function () {
-        if (prefersDarkScheme.matches) {
-            document.body.classList.toggle("light-theme");
-            var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
-        } else {
-            document.body.classList.toggle("dark-theme");
-            var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
-        }
-        localStorage.setItem("theme", theme);
-    });
-
     const init = () => {
-        console.log('inside init')
+        darkLightToggle();
     }
 
     return {
@@ -194,8 +200,6 @@ const blogFractionSelection = (function () {
         init
     }
 })()
-
-
 
 /* anchor jump */
 const AnchorJump = (function () {

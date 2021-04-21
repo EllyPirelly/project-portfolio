@@ -15,13 +15,53 @@ html {
 }
 
 body {
-    background-color: $paleorange;
-    color: $darkgray;
+/*     background-color: $paleorange;
+    color: $darkgray; */
+
+    --bkg-color: #fef8f4;
+    --text-color: #282828;
+    background-color: var(--bkg-color);
+    color: var(--text-color);
+
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 1.45;
     position: relative;
+    // transition of mode change
+    --duration: 0.5s;
+    --timing: ease;
+    transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
+
+    // light when OS light mode is set
+    /*&.light-theme {
+        // ...
+    }*/
+
+    // dark when OS light mode is set
+    &.dark-theme {
+        --text-color: #282828;
+        --bkg-color: #304c65;
+    }
+
+    &.dark-theme img:not(.brand-img) {
+        filter: brightness(.8) contrast(1.2);
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+        // dark when OS dark mode is set
+        &.dark-theme {
+            --text-color: #282828;
+            --bkg-color: #304c65;
+        }
+
+        // light when OS dark mode is set
+        &.light-theme {
+            --text-color: #282828;
+            --bkg-color: #f1a06b;
+        }
+    }
 }
 
 a {
@@ -104,58 +144,3 @@ a.link-style {
         flex: 0 0 30px;
     }
 }
-
-/* prefers color scheme - ONLY TEST DO NOT KEEP LIKE THIS! */
-
-  body {
-    // transition of mode change
-    --duration: 0.5s;
-    --timing: ease;
-
-    // light when OS light mode is set
-    --bkg-color: $paleorange;
-    --text-color: $darkgray;
-
-    color: var(--text-color);
-    background-color: var(--bkg-color);
-    transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
-
-    // dark when OS light mode is set
-    &.dark-theme {
-      --text-color: #282828;
-      --bkg-color: #9d5d32;
-    }
-
-    &.dark-theme img {
-      filter: brightness(.8) contrast(1.2);
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-
-    body {
-      // dark when OS dark mode is set
-      &.dark-theme {
-          --text-color: yellow;
-          --bkg-color: purple;
-      }
-
-      // light when OS dark mode is set
-      &.light-theme {
-        --text-color: purple;
-        --bkg-color: yellow;
-      }
-    }
-  }
-
-  h1,
-  p {
-    color: var(--text-color);
-  }
-
-
-  /* TO CHECK*/
-  /* as root or better (?) as style tag in html head: <meta name="color-scheme" content="dark light"> - avoid FOIT*/
-  /*:root {
-  color-scheme: light dark;
-  }*/
