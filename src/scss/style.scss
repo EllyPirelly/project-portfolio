@@ -13,40 +13,61 @@ html {
     margin: 0;
     padding: 0;
 }
+:root {
+    --theme-trans-duration: 0.5s;
+    --theme-trans-timing: ease;
+    /* light */
+    --bg-color-lt: #fef8f4;
+    --text-color-lt: #282828;
+    /* dark */
+    --bg-color-dt: #477095;
+    --bg-color-sn-dt: #c2dae8;
+}
 
 body {
-    // color theme light is default
-    /*background-color: $paleorange;
-    color: $darkgray; */
-    --bkg-color: #fef8f4;
-    --text-color: #282828;
-    background-color: var(--bkg-color);
-    color: var(--text-color);
+    background-color: var(--bg-color-lt);
+    color: var(--text-color-lt);
 
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 1.45;
     position: relative;
-    // transition of mode change
-    --duration: 0.5s;
-    --timing: ease;
-    transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
 
     // color theme dark on toggle button click || OS prefers-scheme
     &.dark-theme {
-        --bkg-color: #304c65;
-        --text-color: #282828;
+        .outer-wrapper {
+            transition:
+                color var(--theme-trans-duration) var(--theme-trans-timing),
+                background-color var(--theme-trans-duration) var(--theme-trans-timing);
+        }
+        .outer-wrapper.index-en,
+        .outer-wrapper.index-de {
+            background-color: var(--bg-color-dt);
+        }
 
-        /* for testing, needs refactoring */
-        .outer-wrapper.index-en {
-            background-color: #2f4f4f;
-        }
         .outer-wrapper.blog-overview {
-            background-color: #8b008b;
+            background-color: var(--bg-color-dt);
+            .sn-wrapper {
+                background-color: var(--bg-color-sn-dt);
+            }
+            .tagitems-headline,
+            .blg-tag-svg {
+                color: var(--bg-color-lt);
+            }
         }
+
         .outer-wrapper.blog-article {
-            background-color: #e9967a;
+            background-color: var(--bg-color-dt);
+            .blg-wrapper {
+                color: var(--bg-color-lt);
+            }
+            .sn-wrapper {
+                background-color: var(--bg-color-sn-dt);
+            }
+            .blg-tag {
+                color: var(--text-color-lt);
+            }
         }
     }
 
