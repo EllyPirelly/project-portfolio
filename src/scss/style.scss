@@ -15,9 +15,9 @@ html {
 }
 
 body {
-/*     background-color: $paleorange;
+    // color theme light is default
+    /*background-color: $paleorange;
     color: $darkgray; */
-
     --bkg-color: #fef8f4;
     --text-color: #282828;
     background-color: var(--bkg-color);
@@ -33,34 +33,25 @@ body {
     --timing: ease;
     transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
 
-    // light when OS light mode is set
-    /*&.light-theme {
-        // ...
-    }*/
-
-    // dark when OS light mode is set
+    // color theme dark on toggle button click || OS prefers-scheme
     &.dark-theme {
-        --text-color: #282828;
         --bkg-color: #304c65;
+        --text-color: #282828;
+
+        /* for testing, needs refactoring */
+        .outer-wrapper.index-en {
+            background-color: #2f4f4f;
+        }
+        .outer-wrapper.blog-overview {
+            background-color: #8b008b;
+        }
+        .outer-wrapper.blog-article {
+            background-color: #e9967a;
+        }
     }
 
     &.dark-theme img:not(.brand-img) {
         filter: brightness(.8) contrast(1.2);
-    }
-
-    @media (prefers-color-scheme: dark) {
-
-        // dark when OS dark mode is set
-        &.dark-theme {
-            --text-color: #282828;
-            --bkg-color: #304c65;
-        }
-
-        // light when OS dark mode is set
-        &.light-theme {
-            --text-color: #282828;
-            --bkg-color: #f1a06b;
-        }
     }
 }
 

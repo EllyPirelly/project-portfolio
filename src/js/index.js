@@ -1,42 +1,43 @@
-// dark-light mode
-const darkLightMode = (function () {
+// check if prefers-color-scheme is available
+/*if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+    console.log('🎉 Dark mode is supported');
+} */
 
-    const darkLightToggle = () => {
+// color scheme
+const colorSchemeSelection = (function () {
 
-        // check if prefers-color-scheme is available
-        /*if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-            console.log('🎉 Dark mode is supported');
-        } */
-
-        const btn = document.querySelector(".icon-mode-button");
-        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-        // get current theme from localStorage
-        const currentTheme = localStorage.getItem("theme");
-
-        // toggle css color themes
-        if (currentTheme == "dark") {
-            document.body.classList.toggle("dark-theme");
-        } else if (currentTheme == "light") {
-            document.body.classList.toggle("light-theme");
+    const toggleColorThemeClass = theme => {
+        const colorThemeMap = {
+            'light': 'dark',
+            'dark': 'light'
         }
 
-        // check and save scheme decision to localStorage
-        btn.addEventListener("click", function () {
-            if (prefersDarkScheme.matches) {
-                document.body.classList.toggle("light-theme");
-                var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
-            } else {
-                document.body.classList.toggle("dark-theme");
-                var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
-            }
-            localStorage.setItem("theme", theme);
+        document.body.classList.remove(`${colorThemeMap[theme]}-theme`);
+        document.body.classList.add(`${theme}-theme`);
+
+    }
+
+    const toggleColorTheme = () => {
+
+        const currentColorTheme = localStorage.getItem('theme')
+            ? localStorage.getItem('theme')
+            : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+        toggleColorThemeClass(currentColorTheme);
+
+        const colorThemeBtn = document.querySelector('[data-element="icon-mode-switch"]');
+
+        colorThemeBtn.addEventListener('click', function () {
+            const theme = this.getAttribute(`data-mode-${currentColorTheme}`);
+            toggleColorThemeClass(theme);
+            localStorage.setItem('theme', theme);
         });
 
     }
 
     const init = () => {
-        darkLightToggle();
+        toggleColorTheme();
     }
 
     return {
@@ -238,7 +239,7 @@ const AnchorJump = (function () {
 })()
 
 document.addEventListener('DOMContentLoaded', () => {
-    darkLightMode.init();
+    colorSchemeSelection.init();
     AnchorJump.init();
     toggleVisibility();
     blogFractionSelection.init();
