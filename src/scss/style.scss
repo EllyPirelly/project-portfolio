@@ -13,54 +13,66 @@ html {
     margin: 0;
     padding: 0;
 }
+:root {
+    --theme-trans-duration: 0.5s;
+    --theme-trans-timing: ease;
+    /* light */
+    --bg-color-lt: #fef8f4;
+    --text-color-lt: #282828;
+    /* dark */
+    --bg-color-dt: #477095;
+    --bg-color-sn-dt: #c2dae8;
+}
 
 body {
-/*     background-color: $paleorange;
-    color: $darkgray; */
-
-    --bkg-color: #fef8f4;
-    --text-color: #282828;
-    background-color: var(--bkg-color);
-    color: var(--text-color);
+    background-color: var(--bg-color-lt);
+    color: var(--text-color-lt);
 
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 1.45;
     position: relative;
-    // transition of mode change
-    --duration: 0.5s;
-    --timing: ease;
-    transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
 
-    // light when OS light mode is set
-    /*&.light-theme {
-        // ...
-    }*/
-
-    // dark when OS light mode is set
+    // color theme dark on toggle button click || OS prefers-scheme
     &.dark-theme {
-        --text-color: #282828;
-        --bkg-color: #304c65;
+        .outer-wrapper {
+            transition:
+                color var(--theme-trans-duration) var(--theme-trans-timing),
+                background-color var(--theme-trans-duration) var(--theme-trans-timing);
+        }
+        .outer-wrapper.index-en,
+        .outer-wrapper.index-de {
+            background-color: var(--bg-color-dt);
+        }
+
+        .outer-wrapper.blog-overview {
+            background-color: var(--bg-color-dt);
+            .sn-wrapper {
+                background-color: var(--bg-color-sn-dt);
+            }
+            .tagitems-headline,
+            .blg-tag-svg {
+                color: var(--bg-color-lt);
+            }
+        }
+
+        .outer-wrapper.blog-article {
+            background-color: var(--bg-color-dt);
+            .blg-wrapper {
+                color: var(--bg-color-lt);
+            }
+            .sn-wrapper {
+                background-color: var(--bg-color-sn-dt);
+            }
+            .blg-tag {
+                color: var(--text-color-lt);
+            }
+        }
     }
 
     &.dark-theme img:not(.brand-img) {
         filter: brightness(.8) contrast(1.2);
-    }
-
-    @media (prefers-color-scheme: dark) {
-
-        // dark when OS dark mode is set
-        &.dark-theme {
-            --text-color: #282828;
-            --bkg-color: #304c65;
-        }
-
-        // light when OS dark mode is set
-        &.light-theme {
-            --text-color: #282828;
-            --bkg-color: #f1a06b;
-        }
     }
 }
 
