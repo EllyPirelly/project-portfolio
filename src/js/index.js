@@ -6,17 +6,6 @@
 // color scheme
 const colorSchemeSelection = (function () {
 
-    const toggleColorThemeClass = theme => {
-        const colorThemeMap = {
-            'light': 'dark',
-            'dark': 'light'
-        }
-
-        document.body.classList.remove(`${colorThemeMap[theme]}-theme`);
-        document.body.classList.add(`${theme}-theme`);
-
-    }
-
     const toggleColorTheme = () => {
 
         const currentColorTheme = localStorage.getItem('theme')
@@ -24,13 +13,13 @@ const colorSchemeSelection = (function () {
             : window.matchMedia('(prefers-color-scheme: dark)').matches
                 ? 'dark'
                 : 'light';
-        toggleColorThemeClass(currentColorTheme);
+        document.body.classList.toggle('dark-theme');
 
         const colorThemeBtn = document.querySelector('[data-element="icon-mode-switch"]');
 
         colorThemeBtn.addEventListener('click', function () {
             const theme = this.getAttribute(`data-mode-${currentColorTheme}`);
-            toggleColorThemeClass(theme);
+            document.body.classList.toggle('dark-theme');
             localStorage.setItem('theme', theme);
         });
 
