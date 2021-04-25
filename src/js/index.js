@@ -1,5 +1,5 @@
 // dark-light mode
-const darkLightMode = (function () {
+const ColorScheme = (function () {
     const darkModeClass = 'dark-theme'
     const localStorageKey = 'hasColorSchemeDark'
 
@@ -234,7 +234,7 @@ const AnchorJump = (function () {
 })()
 
 document.addEventListener('DOMContentLoaded', () => {
-    darkLightMode.init();
+    ColorScheme.init();
     AnchorJump.init();
     toggleVisibility();
     blogFractionSelection.init();
