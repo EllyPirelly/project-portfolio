@@ -4,15 +4,15 @@ const ColorScheme = (function () {
     const localStorageKey = 'hasColorSchemeDark'
 
     const getColorScheme = () => {
-        // return if dark colorscheme is enable
+        // return if dark colorscheme is enable (one line of code should be enough)
     }
 
     const removeColorScheme = () => {
-        // remove everything related to dark colorscheme
+        // remove everything related to dark colorscheme (two lines of code should be enough)
     }
 
     const setColorScheme = () => {
-        // set everything related to dark colorscheme
+        // set everything related to dark colorscheme (two lines of code should be enough)
     }
 
     const toggleColorScheme = (setDarkColorScheme) => {
