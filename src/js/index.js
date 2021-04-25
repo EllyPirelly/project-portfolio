@@ -1,32 +1,38 @@
-// check if prefers-color-scheme is available
-/*if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-    console.log('🎉 Dark mode is supported');
-} */
+// dark-light mode
+const darkLightMode = (function () {
+    const darkModeClass = 'dark-theme'
+    const localStorageKey = 'hasColorSchemeDark'
 
-// color scheme
-const colorSchemeSelection = (function () {
+    const getColorScheme = () => {
+        // return if dark colorscheme is enable
+    }
 
-    const toggleColorTheme = () => {
+    const removeColorScheme = () => {
+        // remove everything related to dark colorscheme
+    }
 
-        const currentColorTheme = localStorage.getItem('theme')
-            ? localStorage.getItem('theme')
-            : window.matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'dark'
-                : 'light';
-        document.body.classList.toggle('dark-theme');
+    const setColorScheme = () => {
+        // set everything related to dark colorscheme
+    }
 
-        const colorThemeBtn = document.querySelector('[data-element="icon-mode-switch"]');
+    const toggleColorScheme = (setDarkColorScheme) => {
+        // get toggle/ checkbox which toggles the color scheme (it shouldn't be
+        // a button, but a checkbox, I changed the markup in the index.html already)
 
-        colorThemeBtn.addEventListener('click', function () {
-            const theme = this.getAttribute(`data-mode-${currentColorTheme}`);
-            document.body.classList.toggle('dark-theme');
-            localStorage.setItem('theme', theme);
-        });
+        // if checkbox doesn't exist exit the function
 
+        // set the 'checked' property of the checkbox in accordance to the available color scheme
+
+        // add an action/ function to toggle the color scheme
+        // the function should be executed when the checkbox changes its state
     }
 
     const init = () => {
-        toggleColorTheme();
+        if (getColorScheme()) {
+            setColorScheme()
+        }
+
+        toggleColorScheme()
     }
 
     return {
@@ -228,7 +234,7 @@ const AnchorJump = (function () {
 })()
 
 document.addEventListener('DOMContentLoaded', () => {
-    colorSchemeSelection.init();
+    darkLightMode.init();
     AnchorJump.init();
     toggleVisibility();
     blogFractionSelection.init();
