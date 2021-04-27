@@ -9,7 +9,7 @@
 
 ### Preconditions
 
-As at the beginning there only was this statement: "I want a website".<br>
+At the beginning there only was this statement: "I want a website".<br>
 From that, following preconditions have been derived:
 
 - start building with HTML and (vanilla) JavaScript - **non-modular**
@@ -18,6 +18,8 @@ From that, following preconditions have been derived:
 - come up with design myself
 - taking care of images, svgs, etc, myself
 - create content
+- desirable features will arise along the way
+- identify the right moment to start refactoring to modular
 
 ### Collaboration
 
