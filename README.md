@@ -23,7 +23,7 @@ From that, following preconditions have been derived:
 
 ### Collaboration
 
-The filtering function for the blogpost overview page has been developped in collaboration with [@bermael](https://github.com/bermael)
+The filtering function for the blogpost overview page and the dark-light mode toggle has been developped in collaboration with [@bermael](https://github.com/bermael)
 
 ### How to run this?
 
