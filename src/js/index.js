@@ -1,38 +1,54 @@
-// check if prefers-color-scheme is available
-/*if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-    console.log('🎉 Dark mode is supported');
-} */
+// dark-light mode
+const colorScheme = (function () {
 
-// color scheme
-const colorSchemeSelection = (function () {
+    // check if prefers-color-scheme is available
+    if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+        console.log('🎉 Dark mode is supported');
+    }
 
-    const toggleColorTheme = () => {
+    const darkModeClass = 'dark-theme';
+    const localStorageColorScheme = 'hasColorSchemeDark';
 
-        const currentColorTheme = localStorage.getItem('theme')
-            ? localStorage.getItem('theme')
-            : window.matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'dark'
-                : 'light';
-        document.body.classList.toggle('dark-theme');
+    const getColorScheme = () => {
+        return localStorage.getItem(localStorageColorScheme) || window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
 
-        const colorThemeBtn = document.querySelector('[data-element="icon-mode-switch"]');
+    const removeColorScheme = () => {
+        document.body.classList.remove(darkModeClass);
+        localStorage.removeItem(localStorageColorScheme);
+    }
 
-        colorThemeBtn.addEventListener('click', function () {
-            const theme = this.getAttribute(`data-mode-${currentColorTheme}`);
-            document.body.classList.toggle('dark-theme');
-            localStorage.setItem('theme', theme);
+    const setColorScheme = () => {
+        document.body.classList.add(darkModeClass);
+        localStorage.setItem(localStorageColorScheme, 'true');
+    }
+
+    const toggleColorScheme = () => {
+        const colorToggleBox = document.querySelector('[data-element="icon-mode-switch"]');
+
+        colorToggleBox.checked = getColorScheme();
+
+        colorToggleBox.addEventListener('change', function () {
+            if (this.checked) {
+                setColorScheme();
+            } else {
+                removeColorScheme();
+            }
         });
-
     }
 
     const init = () => {
-        toggleColorTheme();
+        if (getColorScheme()) {
+            setColorScheme();
+        }
+
+        toggleColorScheme();
     }
 
     return {
         init
     }
-})()
+})();
 
 // toggle
 const toggleClass = (item, targetItem) => {
@@ -189,7 +205,7 @@ const blogFractionSelection = (function () {
     return {
         init
     }
-})()
+})();
 
 /* anchor jump */
 const AnchorJump = (function () {
@@ -225,11 +241,11 @@ const AnchorJump = (function () {
     return {
         init,
     }
-})()
+})();
 
 document.addEventListener('DOMContentLoaded', () => {
-    colorSchemeSelection.init();
+    colorScheme.init();
     AnchorJump.init();
     toggleVisibility();
     blogFractionSelection.init();
-})
+});

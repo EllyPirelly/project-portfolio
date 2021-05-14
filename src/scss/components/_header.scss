@@ -1,4 +1,3 @@
-
 /* header */
 .header-wrapper {
     background-color: $delicateblue;
@@ -113,6 +112,10 @@ button {
 }
 
 /* icon mode start */
+.icon-mode-checkbox {
+    display: none;
+}
+
 .icon-mode-button {
     border: 1px solid transparent;
     cursor: pointer;
@@ -148,7 +151,7 @@ button {
     background-color: $paleorange;
     color: $darkgray;
 
-    .toggle & {
+    body:not(.dark-theme) & {
         display: none;
     }
 }
@@ -156,7 +159,7 @@ button {
 .icon-mode-svg.moon {
     display: none;
 
-    .toggle & {
+    body:not(.dark-theme) & {
         background-color: $delicateblue50darken;
         color: $delicateblue85;
         display: inline-block;
