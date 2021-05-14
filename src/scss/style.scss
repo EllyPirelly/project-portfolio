@@ -34,7 +34,15 @@ body {
     line-height: 1.45;
     position: relative;
 
-    // color theme dark on toggle button click || OS prefers-scheme
+    .outer-wrapper {
+        background-color: var(--bg-color-lt);
+        color: var(--text-color-lt);
+        transition:
+            color var(--theme-trans-duration) var(--theme-trans-timing),
+            background-color var(--theme-trans-duration) var(--theme-trans-timing);
+    }
+
+    // color theme dark on checkbox checked (= true); default scheme is light, and light = false
     &.dark-theme {
         .outer-wrapper {
             transition:
